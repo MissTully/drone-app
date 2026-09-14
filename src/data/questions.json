@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "reg-001",
+    "topic": "regulations",
+    "stem": "What is the minimum age to apply for a Remote Pilot Certificate with a small UAS rating?",
+    "choices": [
+      "14 years old",
+      "16 years old",
+      "18 years old",
+      "21 years old"
+    ],
+    "correctIndex": 1,
+    "explanation": "Under 14 CFR Part 107, an applicant for a remote pilot certificate with a small UAS rating must be at least 16 years of age.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "reg-002",
+    "topic": "regulations",
+    "stem": "How long is a Part 107 Remote Pilot Certificate valid before recurrent training or testing is required?",
+    "choices": [
+      "12 calendar months",
+      "24 calendar months",
+      "36 calendar months",
+      "It does not expire"
+    ],
+    "correctIndex": 1,
+    "explanation": "A remote pilot must complete recurrent training or testing every 24 calendar months to exercise the privileges of the certificate.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "reg-003",
+    "topic": "regulations",
+    "stem": "Unless a waiver is issued, the maximum groundspeed for a small unmanned aircraft under Part 107 is:",
+    "choices": [
+      "87 knots (100 mph)",
+      "100 knots (115 mph)",
+      "70 knots (80 mph)",
+      "50 knots (58 mph)"
+    ],
+    "correctIndex": 0,
+    "explanation": "Part 107 operating limitations cap groundspeed at 87 knots (100 miles per hour) unless the FAA authorizes a deviation.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "reg-004",
+    "topic": "regulations",
+    "stem": "The maximum altitude for small UAS operations under Part 107, unless flying within 400 feet of a structure, is:",
+    "choices": [
+      "200 feet AGL",
+      "400 feet AGL",
+      "500 feet AGL",
+      "1,000 feet AGL"
+    ],
+    "correctIndex": 1,
+    "explanation": "You may not fly higher than 400 feet above ground level, except that you may fly higher if remaining within a 400-foot radius of a structure and no higher than 400 feet above the structure's uppermost limit.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "reg-005",
+    "topic": "regulations",
+    "stem": "A small unmanned aircraft accident that causes serious injury to a person or property damage (other than to the UA) exceeding $500 must be reported to the FAA within:",
+    "choices": [
+      "24 hours",
+      "48 hours",
+      "10 calendar days",
+      "30 calendar days"
+    ],
+    "correctIndex": 2,
+    "explanation": "Part 107 accident reporting requires notification to the FAA within 10 calendar days after an accident involving serious injury, loss of consciousness, or qualifying property damage.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "reg-006",
+    "topic": "regulations",
+    "stem": "A remote PIC may not act as pilot in command of a small UAS within how many hours after consuming alcohol?",
+    "choices": [
+      "4 hours",
+      "6 hours",
+      "8 hours",
+      "12 hours"
+    ],
+    "correctIndex": 2,
+    "explanation": "Part 107 incorporates the alcohol rules of 14 CFR 91.17: no acting as a crewmember within 8 hours after drinking, while under the influence, or with a BAC of 0.04 or greater.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "reg-007",
+    "topic": "regulations",
+    "stem": "To operate under Part 107, a small unmanned aircraft must weigh:",
+    "choices": [
+      "Less than 0.55 pounds",
+      "Less than 55 pounds, including everything on board and attached",
+      "55 pounds or more",
+      "No more than 100 pounds"
+    ],
+    "correctIndex": 1,
+    "explanation": "A small unmanned aircraft is one weighing less than 55 pounds, including everything on board or otherwise attached, on takeoff.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "air-001",
+    "topic": "airspace",
+    "stem": "In which airspace may you generally operate a small UAS without ATC authorization, provided other Part 107 rules are met?",
+    "choices": [
+      "Class B",
+      "Class C",
+      "Class D",
+      "Class G"
+    ],
+    "correctIndex": 3,
+    "explanation": "Class G is uncontrolled airspace. Part 107 operations there typically do not require ATC authorization, unlike Class B, C, D, and surface Class E.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "air-002",
+    "topic": "airspace",
+    "stem": "ATC authorization is required before operating a small UAS in which of the following?",
+    "choices": [
+      "Class G below 400 feet AGL only",
+      "Class B, C, D, and surface Class E airspace",
+      "Uncontrolled airspace more than 5 miles from an airport",
+      "Any airspace depicted on a sectional chart"
+    ],
+    "correctIndex": 1,
+    "explanation": "Part 107 requires prior authorization to operate in Class B, Class C, Class D, and within the lateral boundaries of the surface area of Class E airspace designated for an airport.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "air-003",
+    "topic": "airspace",
+    "stem": "What is LAANC primarily used for in small UAS operations?",
+    "choices": [
+      "Filing a NASA ASRS report after a flyaway",
+      "Near real-time airspace authorization in controlled airspace",
+      "Registering a drone that weighs more than 0.55 pounds",
+      "Obtaining a Remote Pilot Certificate"
+    ],
+    "correctIndex": 1,
+    "explanation": "LAANC (Low Altitude Authorization and Notification Capability) lets remote pilots request near real-time airspace authorization in controlled airspace where the service is available.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "air-004",
+    "topic": "airspace",
+    "stem": "A Temporary Flight Restriction (TFR) over a stadium for a major sporting event generally means a remote PIC should:",
+    "choices": [
+      "Operate below 200 feet AGL without further action",
+      "Not operate in the TFR unless specifically authorized",
+      "Notify UNICOM and then continue the flight",
+      "Operate only if a visual observer is used"
+    ],
+    "correctIndex": 1,
+    "explanation": "TFRs, including standing sporting-event restrictions, prohibit operations in the described area unless you have specific authorization. Always check current NOTAMs/TFRs before flight.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "air-005",
+    "topic": "airspace",
+    "stem": "Which statement best describes prohibited airspace (for example, P-40)?",
+    "choices": [
+      "Flight is allowed if you remain below 400 feet AGL",
+      "Flight of aircraft is not allowed unless specifically authorized",
+      "It is advisory only and depicted for situational awareness",
+      "It is the same as Class G airspace"
+    ],
+    "correctIndex": 1,
+    "explanation": "Prohibited areas are established for national security or other reasons; aircraft flight is not allowed without specific authorization from the using or controlling agency.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "air-006",
+    "topic": "airspace",
+    "stem": "A Military Operations Area (MOA) on a sectional chart indicates:",
+    "choices": [
+      "Civil aircraft are prohibited at all times",
+      "An area of military training; VFR flight is not prohibited, but extra caution is required",
+      "The same restrictions as a prohibited area",
+      "Class A airspace from the surface to 18,000 feet"
+    ],
+    "correctIndex": 1,
+    "explanation": "MOAs separate certain military training from IFR traffic. VFR aircraft are not barred, but they should exercise extreme caution when the MOA is active.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "air-007",
+    "topic": "airspace",
+    "stem": "Before flying near a towered airport in Class D airspace, a remote PIC should:",
+    "choices": [
+      "Self-announce on MULTICOM 122.9 and depart",
+      "Obtain airspace authorization and comply with any altitude or area limits",
+      "Only check the windsock; ATC authorization is never required in Class D",
+      "Remain below 100 feet AGL so authorization is automatic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Class D is controlled airspace. Part 107 operations need prior authorization (often via LAANC or FAA DroneZone) and must stay within the approved volume.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wx-001",
+    "topic": "weather",
+    "stem": "The Part 107 minimum flight visibility, as observed from the control station, is:",
+    "choices": [
+      "1 statute mile",
+      "2 statute miles",
+      "3 statute miles",
+      "5 statute miles"
+    ],
+    "correctIndex": 2,
+    "explanation": "Part 107 requires flight visibility of at least 3 statute miles from the location of the control station, unless a waiver is issued.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wx-002",
+    "topic": "weather",
+    "stem": "Minimum cloud clearance for small UAS operations under Part 107 is:",
+    "choices": [
+      "500 feet below and 2,000 feet horizontally from clouds",
+      "1,000 feet below and 1 mile horizontally from clouds",
+      "Clear of clouds in all airspace",
+      "500 feet above and 1,000 feet horizontally from clouds"
+    ],
+    "correctIndex": 0,
+    "explanation": "Unless waived, you must remain at least 500 feet below clouds and 2,000 feet horizontally from clouds.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wx-003",
+    "topic": "weather",
+    "stem": "High density altitude most directly causes small UAS performance to:",
+    "choices": [
+      "Improve because the air is smoother",
+      "Decrease (less lift, reduced propeller/thrust efficiency)",
+      "Remain the same if battery voltage is normal",
+      "Increase climb rate due to thinner air"
+    ],
+    "correctIndex": 1,
+    "explanation": "High density altitude (hot, high, and/or humid conditions) reduces air density, which reduces lift and propeller efficiency and degrades climb, hover, and endurance.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wx-004",
+    "topic": "weather",
+    "stem": "A METAR is best described as:",
+    "choices": [
+      "A forecast of expected weather, typically covering 24\u201330 hours",
+      "An aviation routine weather report of observed conditions",
+      "A convective SIGMET for thunderstorms only",
+      "A winds aloft forecast for 3,000 through 39,000 feet"
+    ],
+    "correctIndex": 1,
+    "explanation": "METARs are routine (or special) observation reports. TAFs are terminal aerodrome forecasts of expected conditions.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wx-005",
+    "topic": "weather",
+    "stem": "Frost on the airframe or propeller of a small UAS should be:",
+    "choices": [
+      "Ignored if it is less than 1/8 inch thick",
+      "Removed before flight because it can disrupt airflow and reduce lift",
+      "Left in place to improve propeller bite in cold air",
+      "Acceptable if density altitude is low"
+    ],
+    "correctIndex": 1,
+    "explanation": "Frost spoils the smooth flow of air over surfaces, reducing lift and increasing drag. It should be removed before flight.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wx-006",
+    "topic": "weather",
+    "stem": "Which weather condition is generally the most hazardous for small UAS operations?",
+    "choices": [
+      "Scattered cirrus at 25,000 feet",
+      "A nearby thunderstorm with gust fronts and possible lightning",
+      "A temperature/dew point spread of 8\u00b0C",
+      "Light and variable wind at the surface"
+    ],
+    "correctIndex": 1,
+    "explanation": "Thunderstorms produce severe turbulence, wind shear, hail, heavy rain, and lightning. Small UAS operations should stay well away from convective activity.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "wx-007",
+    "topic": "weather",
+    "stem": "Wind direction reported in a METAR is referenced to:",
+    "choices": [
+      "Magnetic north",
+      "True north",
+      "The runway heading",
+      "Grid north"
+    ],
+    "correctIndex": 1,
+    "explanation": "METAR (and TAF) wind directions are reported in degrees true. Winds from ATIS/AWOS used for operations at an airport are typically magnetic.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lp-001",
+    "topic": "loading-performance",
+    "stem": "If the center of gravity is too far aft on a small UAS, the aircraft is most likely to be:",
+    "choices": [
+      "Nose-heavy and sluggish in pitch",
+      "Unstable and difficult to control",
+      "Unaffected, because CG only matters for manned airplanes",
+      "Unable to hover in ground effect"
+    ],
+    "correctIndex": 1,
+    "explanation": "An aft CG reduces pitch stability. The aircraft may be overly sensitive and harder to control, especially in wind or during maneuvers.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lp-002",
+    "topic": "loading-performance",
+    "stem": "Exceeding the manufacturer\u2019s maximum takeoff weight typically results in:",
+    "choices": [
+      "Improved stability and longer endurance",
+      "Reduced performance and possible structural or motor overload",
+      "No change if you stay below 400 feet AGL",
+      "Automatic ATC authorization in controlled airspace"
+    ],
+    "correctIndex": 1,
+    "explanation": "Overloading reduces climb, maneuvering, and endurance and can overstress motors, props, and structure. Always stay within published limits.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lp-003",
+    "topic": "loading-performance",
+    "stem": "On a hot day at a high-elevation launch site, you should expect:",
+    "choices": [
+      "Higher density altitude and reduced aircraft performance",
+      "Lower density altitude and increased payload capability",
+      "No performance change if the battery is fully charged",
+      "Increased propeller efficiency due to thinner air"
+    ],
+    "correctIndex": 0,
+    "explanation": "High elevation plus high temperature raises density altitude. Thinner air reduces lift and thrust, so payload and hover performance suffer.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lp-004",
+    "topic": "loading-performance",
+    "stem": "Cold temperatures most commonly reduce small UAS performance by:",
+    "choices": [
+      "Increasing GPS satellite count",
+      "Reducing lithium battery capacity and increasing voltage sag",
+      "Making propellers too efficient",
+      "Lowering density altitude to sea-level values"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lithium batteries deliver less usable capacity in the cold and can sag under load. Keep batteries warm and plan shorter flights.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "lp-005",
+    "topic": "loading-performance",
+    "stem": "In a level turn, load factor on the aircraft:",
+    "choices": [
+      "Decreases as bank angle increases",
+      "Increases as bank angle increases",
+      "Is independent of bank angle",
+      "Applies only to fixed-wing manned aircraft"
+    ],
+    "correctIndex": 1,
+    "explanation": "Load factor increases with bank angle in a level turn (for example, about 2 G at 60\u00b0 of bank). Higher load factor raises stall speed and structural stress.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "lp-006",
+    "topic": "loading-performance",
+    "stem": "Who is responsible for ensuring a small UAS is loaded within manufacturer limits before flight?",
+    "choices": [
+      "The visual observer",
+      "The remote PIC",
+      "ATC if the flight is in Class D",
+      "The person who registered the aircraft only"
+    ],
+    "correctIndex": 1,
+    "explanation": "The remote PIC is responsible for the safe operation of the small UAS, including weight, balance, and compliance with manufacturer limitations.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lp-007",
+    "topic": "loading-performance",
+    "stem": "Adding a heavy camera to one side of the airframe without adjusting the CG is most likely to cause:",
+    "choices": [
+      "Automatic compensation with no handling change",
+      "Uneven motor loading, reduced efficiency, and degraded control",
+      "A legal increase of the 55-pound small UAS limit",
+      "Improved yaw authority"
+    ],
+    "correctIndex": 1,
+    "explanation": "An offset payload forces some motors to work harder, draining the battery faster and reducing control margin. Recheck CG and hover attitude after payload changes.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ops-001",
+    "topic": "operations-emergency",
+    "stem": "A small unmanned aircraft must yield the right of way to:",
+    "choices": [
+      "Only aircraft on IFR flight plans",
+      "Manned aircraft, including airplanes, helicopters, and balloons",
+      "Only aircraft that have announced on CTAF",
+      "Other small UAS, but not manned aircraft"
+    ],
+    "correctIndex": 1,
+    "explanation": "Part 107 requires the small unmanned aircraft to yield right of way to all manned aircraft. See-and-avoid remains a core remote PIC duty.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ops-002",
+    "topic": "operations-emergency",
+    "stem": "Unless a waiver is issued, the remote PIC must be able to see the small unmanned aircraft:",
+    "choices": [
+      "On a first-person-view screen only",
+      "With unaided vision (corrective lenses allowed) throughout the flight",
+      "Through binoculars at all times",
+      "Only during takeoff and landing"
+    ],
+    "correctIndex": 1,
+    "explanation": "Visual line of sight (VLOS) is required. The remote PIC or a visual observer must be able to see the aircraft with human vision (glasses/contacts OK, not binoculars as the primary means).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ops-003",
+    "topic": "operations-emergency",
+    "stem": "If a lost-link (lost-control) event occurs, the remote PIC should:",
+    "choices": [
+      "Abandon the area immediately and file a police report",
+      "Follow the preplanned lost-link procedure and remain alert to traffic and people",
+      "Climb the aircraft above 400 feet to restore signal",
+      "Switch to a different aircraft on the same controller"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lost-link procedures should be briefed before flight (for example return-to-home). The remote PIC stays responsible for collision avoidance and for not creating a hazard if the aircraft flies away.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ops-004",
+    "topic": "operations-emergency",
+    "stem": "Unless authorized by waiver, a remote PIC may simultaneously operate:",
+    "choices": [
+      "As many small UAS as the control station can display",
+      "Only one small unmanned aircraft",
+      "Two small UAS if a visual observer watches one of them",
+      "A swarm so long as they stay in Class G"
+    ],
+    "correctIndex": 1,
+    "explanation": "Part 107 generally limits a remote PIC to one small unmanned aircraft at a time unless a certificate of waiver allows otherwise.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "ops-005",
+    "topic": "operations-emergency",
+    "stem": "When a visual observer is used, the remote PIC and observer must:",
+    "choices": [
+      "Maintain effective communication and coordinate to see and avoid other aircraft",
+      "Stand at least 500 feet apart",
+      "Both hold Remote Pilot Certificates",
+      "Use FPV goggles so both see the same video feed"
+    ],
+    "correctIndex": 0,
+    "explanation": "If a VO is used, the remote PIC and VO must maintain effective communication so the UA remains in VLOS and other aircraft can be seen and avoided.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ops-006",
+    "topic": "operations-emergency",
+    "stem": "For night small UAS operations under Part 107, the aircraft must be equipped with:",
+    "choices": [
+      "Landing lights aimed at the ground only",
+      "Anti-collision lighting visible for at least 3 statute miles",
+      "A transponder and ADS-B Out",
+      "Strobe lights on the control station"
+    ],
+    "correctIndex": 1,
+    "explanation": "Night operations require anti-collision lights visible for at least 3 statute miles. The remote PIC may reduce intensity if needed for collision avoidance.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "ops-007",
+    "topic": "operations-emergency",
+    "stem": "In an in-flight emergency, the remote PIC:",
+    "choices": [
+      "May deviate from Part 107 to the extent necessary to meet that emergency",
+      "Must continue the original flight path until ATC calls",
+      "Must land immediately even if that creates a greater hazard",
+      "May not change altitude without a waiver"
+    ],
+    "correctIndex": 0,
+    "explanation": "Like manned rules, Part 107 allows deviation as required to handle an emergency. The remote PIC may be asked to send a written report if the Administrator requests one.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "apt-001",
+    "topic": "airport-operations",
+    "stem": "CTAF is used primarily to:",
+    "choices": [
+      "Receive IFR clearances in Class A airspace",
+      "Self-announce position and intentions at airports without an operating control tower",
+      "File a flight plan with FSS",
+      "Request LAANC authorization"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Common Traffic Advisory Frequency is used for airport advisory and self-announce procedures at nontowered airports (or when the tower is closed).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "apt-002",
+    "topic": "airport-operations",
+    "stem": "Unless otherwise indicated, airplane traffic patterns at U.S. airports are flown as:",
+    "choices": [
+      "Right traffic",
+      "Left traffic",
+      "Straight-in only",
+      "Opposite the windsock"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard traffic pattern is left turns. Segmented circles, charted notations, or Chart Supplement entries tell you when right traffic is required.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "apt-003",
+    "topic": "airport-operations",
+    "stem": "A windsock at an airport indicates wind direction by:",
+    "choices": [
+      "Pointing into the wind (large open end faces the incoming wind)",
+      "Pointing to true north",
+      "Aligning with the runway number regardless of wind",
+      "Inflating only when wind exceeds 15 knots"
+    ],
+    "correctIndex": 0,
+    "explanation": "The open (large) end of the windsock faces into the wind; the tail points downwind. Pilots take off and land into the wind when able.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "apt-004",
+    "topic": "airport-operations",
+    "stem": "Runway numbers are determined from the runway\u2019s:",
+    "choices": [
+      "True heading rounded to the nearest 10 degrees",
+      "Magnetic heading rounded to the nearest 10 degrees",
+      "Length in hundreds of feet",
+      "Distance from the airport reference point"
+    ],
+    "correctIndex": 1,
+    "explanation": "Runway designation is the magnetic azimuth, rounded to the nearest 10 degrees (for example, 086\u00b0 magnetic is Runway 9).",
+    "difficulty": "medium"
+  },
+  {
+    "id": "apt-005",
+    "topic": "airport-operations",
+    "stem": "NOTAMs are used to:",
+    "choices": [
+      "Publish only long-term chart changes once a year",
+      "Disseminate time-critical aeronautical information, such as TFRs, closed runways, or navaid outages",
+      "Replace the need to check weather",
+      "Register small unmanned aircraft"
+    ],
+    "correctIndex": 1,
+    "explanation": "NOTAMs provide current, time-sensitive information that may not yet appear on charts. Remote PICs should check NOTAMs as part of preflight.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "apt-006",
+    "topic": "airport-operations",
+    "stem": "A segmented circle at a nontowered airport is used to:",
+    "choices": [
+      "Mark the exact geographic center of Class B airspace",
+      "Indicate traffic pattern direction and, with landing-strip indicators, the landing runway",
+      "Show the frequency for clearance delivery",
+      "Identify a glideslope antenna"
+    ],
+    "correctIndex": 1,
+    "explanation": "The segmented circle, often with landing-strip and traffic-pattern indicators, helps pilots determine which runway to use and whether the pattern is left or right.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "apt-007",
+    "topic": "airport-operations",
+    "stem": "When operating a small UAS near an airport, the remote PIC should:",
+    "choices": [
+      "Assume manned traffic will always see and avoid the drone",
+      "Review airport details, traffic patterns, and frequencies, and avoid creating a collision hazard",
+      "Orbit the runway threshold to stay visible to arriving traffic",
+      "Climb to pattern altitude to mix with manned traffic"
+    ],
+    "correctIndex": 1,
+    "explanation": "Near airports, know pattern legs, runways in use, and CTAF/tower frequencies. Stay well clear of manned aircraft and do not transit the pattern or final approach path.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rad-001",
+    "topic": "radio",
+    "stem": "In the ICAO phonetic alphabet, the letter \u201cB\u201d is spoken as:",
+    "choices": [
+      "Baker",
+      "Bravo",
+      "Beta",
+      "Boston"
+    ],
+    "correctIndex": 1,
+    "explanation": "The standard phonetic for B is Bravo (A Alpha, B Bravo, C Charlie, and so on).",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rad-002",
+    "topic": "radio",
+    "stem": "Before transmitting on a CTAF, you should:",
+    "choices": [
+      "Transmit immediately so others hear you first",
+      "Listen to see whether the frequency is clear, then make a concise call",
+      "Hold the microphone key for 10 seconds to test",
+      "Switch to 121.5 and announce your drone flight"
+    ],
+    "correctIndex": 1,
+    "explanation": "Listen before transmitting, keep calls short, and state who you are, where you are, and your intentions so manned traffic can build a mental picture.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rad-003",
+    "topic": "radio",
+    "stem": "The emergency frequency used by aircraft in distress is:",
+    "choices": [
+      "122.8 MHz",
+      "122.9 MHz",
+      "121.5 MHz",
+      "123.0 MHz"
+    ],
+    "correctIndex": 2,
+    "explanation": "121.5 MHz is the international aeronautical emergency (guard) frequency. It is not a substitute for CTAF during normal airport operations.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rad-004",
+    "topic": "radio",
+    "stem": "UNICOM at a nontowered airport is typically used for:",
+    "choices": [
+      "Mandatory ATC separation in Class B",
+      "Advisory information such as wind, runway in use, and airport services",
+      "Oceanic position reports",
+      "Remote ID broadcast"
+    ],
+    "correctIndex": 1,
+    "explanation": "UNICOM is a nongovernment advisory frequency. It may provide wind, runway, and services information; it is not air traffic control.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "rad-005",
+    "topic": "radio",
+    "stem": "If an airport has no tower, FSS, or UNICOM, self-announce traffic is commonly made on MULTICOM frequency:",
+    "choices": [
+      "121.5 MHz",
+      "122.9 MHz",
+      "123.45 MHz",
+      "126.55 MHz"
+    ],
+    "correctIndex": 1,
+    "explanation": "MULTICOM 122.9 MHz is the common self-announce frequency when no other CTAF is published.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "rad-006",
+    "topic": "radio",
+    "stem": "When saying altitudes or numbers on aviation radio, the digit 9 is typically pronounced:",
+    "choices": [
+      "Nine",
+      "Niner",
+      "Novo",
+      "November"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard phraseology uses \u201cniner\u201d for 9 to avoid confusion with German \u201cnein\u201d and with similar-sounding numbers.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rad-007",
+    "topic": "radio",
+    "stem": "A good CTAF call for drone operations near a nontowered airport should include:",
+    "choices": [
+      "Only the aircraft registration, spoken once",
+      "Airport name, who you are (sUAS/drone), location, and intentions",
+      "A request for IFR clearance",
+      "Your home address and phone number"
+    ],
+    "correctIndex": 1,
+    "explanation": "Identify the airport (at the start and end), state that you are a drone/sUAS, give location relative to the airport, altitude, and what you plan to do so arriving/departing traffic can avoid you.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mnt-001",
+    "topic": "maintenance-preflight",
+    "stem": "Part 107 requires the remote PIC to perform a preflight check:",
+    "choices": [
+      "Only after a crash",
+      "To ensure the small UAS is in a condition for safe operation",
+      "Only if the aircraft weighs more than 10 pounds",
+      "Once per calendar month"
+    ],
+    "correctIndex": 1,
+    "explanation": "14 CFR 107.49 requires assessment of the operating environment and a check that the aircraft and control station are in condition for safe operation before flight.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mnt-002",
+    "topic": "maintenance-preflight",
+    "stem": "A propeller with a nick or crack should be:",
+    "choices": [
+      "Used if the aircraft still hovers level",
+      "Removed from service and replaced or repaired per the manufacturer",
+      "Balanced by adding tape to the damaged blade",
+      "Flown only in Class G airspace"
+    ],
+    "correctIndex": 1,
+    "explanation": "Damaged props can fail in flight, causing loss of control and debris hazards. Follow manufacturer guidance; do not fly with damaged blades.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mnt-003",
+    "topic": "maintenance-preflight",
+    "stem": "A swollen or puffed lithium flight battery should be:",
+    "choices": [
+      "Discharged to 0% and reused",
+      "Removed from service; it may be damaged and is a fire risk",
+      "Punctured to release gas before charging",
+      "Charged at a higher current to restore capacity"
+    ],
+    "correctIndex": 1,
+    "explanation": "Swelling indicates internal damage. Isolate the battery per manufacturer/hazmat guidance and do not fly or charge it.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mnt-004",
+    "topic": "maintenance-preflight",
+    "stem": "If a remote PIC knows the small UAS is not in a condition for safe operation, they:",
+    "choices": [
+      "May fly if the mission is urgent",
+      "Must not continue the flight until the aircraft is in a safe condition",
+      "May fly only below 100 feet AGL",
+      "May fly if a visual observer agrees"
+    ],
+    "correctIndex": 1,
+    "explanation": "14 CFR 107.15 prohibits operation of a small UAS that the remote PIC knows or has reason to know is not in a condition for safe operation.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mnt-005",
+    "topic": "maintenance-preflight",
+    "stem": "During preflight, verifying the control link typically includes:",
+    "choices": [
+      "Confirming the transmitter binds/connects and control surfaces or motors respond correctly",
+      "Calling ATC for a radio check on 121.5",
+      "Updating only the camera firmware",
+      "Weighing the aircraft twice"
+    ],
+    "correctIndex": 0,
+    "explanation": "A control-link check confirms the CS and UA are communicating and that inputs produce the expected response before takeoff.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mnt-006",
+    "topic": "maintenance-preflight",
+    "stem": "Why should firmware on the aircraft and control station be current and compatible?",
+    "choices": [
+      "Part 107 lists a specific firmware version for all drones",
+      "Mismatched or outdated firmware can cause failsafes, compass errors, or loss of control",
+      "Firmware updates increase the 55-pound weight limit",
+      "Only camera drones require firmware"
+    ],
+    "correctIndex": 1,
+    "explanation": "Manufacturers release firmware to fix bugs and improve safety. Mixed versions between aircraft and controller are a common source of inflight problems.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "mnt-007",
+    "topic": "maintenance-preflight",
+    "stem": "A preflight compass or IMU warning that will not clear should result in:",
+    "choices": [
+      "Taking off quickly before the warning returns",
+      "Canceling or delaying the flight until the issue is corrected",
+      "Flying in ATTI mode without GPS as a preferred plan",
+      "Ignoring it if the video feed looks sharp"
+    ],
+    "correctIndex": 1,
+    "explanation": "Unreliable heading/attitude data can cause flyaways. Calibrate per the manufacturer in an appropriate location, or do not fly.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "hf-001",
+    "topic": "human-factors-adm",
+    "stem": "Which of the following is one of the five hazardous attitudes described in ADM training?",
+    "choices": [
+      "Invulnerability",
+      "Patience",
+      "Curiosity",
+      "Humility"
+    ],
+    "correctIndex": 0,
+    "explanation": "The five hazardous attitudes are anti-authority, impulsivity, invulnerability, macho, and resignation. Each has a specific antidote.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hf-002",
+    "topic": "human-factors-adm",
+    "stem": "The IMSAFE checklist is used to evaluate:",
+    "choices": [
+      "Airport lighting systems",
+      "The remote PIC\u2019s fitness for flight",
+      "Density altitude calculations",
+      "Battery cell balance only"
+    ],
+    "correctIndex": 1,
+    "explanation": "IMSAFE stands for Illness, Medication, Stress, Alcohol, Fatigue, and Emotion (or Eating). It is a personal preflight go/no-go check.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hf-003",
+    "topic": "human-factors-adm",
+    "stem": "The antidote to the hazardous attitude of impulsivity is:",
+    "choices": [
+      "It could happen to me",
+      "Not so fast\u2014think first",
+      "Follow the rules",
+      "Taking chances is foolish"
+    ],
+    "correctIndex": 1,
+    "explanation": "Impulsivity is the need to do something immediately. The antidote is \u201cNot so fast\u2014think first.\u201d",
+    "difficulty": "medium"
+  },
+  {
+    "id": "hf-004",
+    "topic": "human-factors-adm",
+    "stem": "Fatigue in a remote PIC is most likely to:",
+    "choices": [
+      "Improve reaction time",
+      "Degrade attention, scanning, and decision making",
+      "Have no effect because the aircraft is autonomous",
+      "Increase legal blood-alcohol limits"
+    ],
+    "correctIndex": 1,
+    "explanation": "Fatigue reduces vigilance and ADM quality. If you are too tired to fly a mission safely, do not fly.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "hf-005",
+    "topic": "human-factors-adm",
+    "stem": "The PAVE checklist organizes risk into which four categories?",
+    "choices": [
+      "Pilot, Aircraft, enVironment, External pressures",
+      "People, Airspace, Vehicles, Emergencies",
+      "Plan, Act, Verify, Evaluate",
+      "Power, Attitude, Velocity, Elevation"
+    ],
+    "correctIndex": 0,
+    "explanation": "PAVE is Pilot-in-command, Aircraft, enVironment, and External pressures\u2014a structured way to identify hazards before and during a flight.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "hf-006",
+    "topic": "human-factors-adm",
+    "stem": "The antidote to invulnerability (\u201cit won\u2019t happen to me\u201d) is:",
+    "choices": [
+      "I can make a difference",
+      "It could happen to me",
+      "Follow the rules",
+      "Not so fast\u2014think first"
+    ],
+    "correctIndex": 1,
+    "explanation": "Invulnerability is the belief that accidents happen to others. The antidote is \u201cIt could happen to me.\u201d",
+    "difficulty": "medium"
+  },
+  {
+    "id": "hf-007",
+    "topic": "human-factors-adm",
+    "stem": "The DECIDE model of aeronautical decision making begins with:",
+    "choices": [
+      "Do the first action that comes to mind",
+      "Detect that a change has occurred",
+      "Delegate the decision to the visual observer",
+      "Disregard personal minimums"
+    ],
+    "correctIndex": 1,
+    "explanation": "DECIDE: Detect, Estimate the need to react, Choose a desirable outcome, Identify actions, Do the best action, Evaluate the effect.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "reg-008",
+    "topic": "regulations",
+    "stem": "A small unmanned aircraft that weighs more than 0.55 pounds must generally be:",
+    "choices": [
+      "Painted orange for visibility",
+      "Registered with the FAA and marked with the registration number",
+      "Equipped with a Mode C transponder",
+      "Operated only in Class B airspace"
+    ],
+    "correctIndex": 1,
+    "explanation": "Aircraft heavier than 0.55 pounds (250 grams) must be registered, and the registration must be marked on the aircraft as required by FAA rules.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "air-008",
+    "topic": "airspace",
+    "stem": "A VIP (presidential) TFR typically means small UAS operations in the restricted area are:",
+    "choices": [
+      "Allowed below 200 feet AGL",
+      "Prohibited unless specifically authorized by the appropriate authority",
+      "Allowed if you remain in visual line of sight",
+      "Allowed at night with anti-collision lights"
+    ],
+    "correctIndex": 1,
+    "explanation": "VIP TFRs are strictly enforced. Drone operations inside the TFR are not allowed without specific authorization; violations can lead to serious criminal and certificate action.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "wx-008",
+    "topic": "weather",
+    "stem": "A TAF is best described as:",
+    "choices": [
+      "An hourly observation at the airport",
+      "A forecast of expected weather for a terminal area, typically covering 24 to 30 hours",
+      "A windsock reading converted to knots",
+      "A report of density altitude only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Terminal Aerodrome Forecasts (TAFs) predict wind, visibility, weather, and sky condition for an airport area over a published valid period, often 24\u201330 hours.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "lp-008",
+    "topic": "loading-performance",
+    "stem": "Flying in ground effect (very close to the surface) can:",
+    "choices": [
+      "Increase induced drag and always reduce endurance",
+      "Temporarily increase apparent lift and change handling as you climb out of it",
+      "Eliminate the need for a preflight inspection",
+      "Raise the Part 107 altitude limit to 500 feet"
+    ],
+    "correctIndex": 1,
+    "explanation": "Near the surface, ground effect can reduce induced drag / change rotor inflow, so the aircraft may feel floaty. Performance and control change as you climb out of that layer\u2014plan takeoff and landing accordingly.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "ops-008",
+    "topic": "operations-emergency",
+    "stem": "Operations from a moving vehicle under Part 107 are:",
+    "choices": [
+      "Always prohibited",
+      "Allowed over a sparsely populated area, but not over a populated area (unless waived)",
+      "Allowed over stadiums during events",
+      "Allowed only from moving aircraft"
+    ],
+    "correctIndex": 1,
+    "explanation": "Part 107 prohibits operating a small UAS from a moving aircraft, and from a moving land or water vehicle unless the operation is over a sparsely populated area and the other rules are met.",
+    "difficulty": "hard"
+  },
+  {
+    "id": "apt-008",
+    "topic": "airport-operations",
+    "stem": "AWOS/ASOS at an airport provides:",
+    "choices": [
+      "ATC landing clearances",
+      "Automated weather observations such as wind, visibility, and altimeter",
+      "LAANC authorizations",
+      "Remote ID network status"
+    ],
+    "correctIndex": 1,
+    "explanation": "Automated Weather Observing System / Automated Surface Observing System broadcasts current weather. It is not a control tower.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "rad-008",
+    "topic": "radio",
+    "stem": "The phonetic word for the letter \u201cN\u201d is:",
+    "choices": [
+      "Nancy",
+      "November",
+      "North",
+      "Nectar"
+    ],
+    "correctIndex": 1,
+    "explanation": "N is November in the ICAO phonetic alphabet used in aviation communications.",
+    "difficulty": "easy"
+  },
+  {
+    "id": "mnt-008",
+    "topic": "maintenance-preflight",
+    "stem": "Checking local weather, airspace, and NOTAMs belongs in the preflight process because:",
+    "choices": [
+      "Part 107 only requires inspecting propellers",
+      "The remote PIC must assess the operating environment for safe operation",
+      "ATC will always brief you after takeoff",
+      "It replaces the need for a Remote Pilot Certificate"
+    ],
+    "correctIndex": 1,
+    "explanation": "107.49 includes assessing local weather, local airspace and flight restrictions, locations of persons and property, and other ground hazards\u2014not only the hardware.",
+    "difficulty": "medium"
+  },
+  {
+    "id": "hf-008",
+    "topic": "human-factors-adm",
+    "stem": "The hazardous attitude of anti-authority is best countered by:",
+    "choices": [
+      "Taking chances is foolish",
+      "Follow the rules. They are usually right.",
+      "It could happen to me",
+      "I can make a difference"
+    ],
+    "correctIndex": 1,
+    "explanation": "Anti-authority is \u201cdon\u2019t tell me.\u201d The antidote is to follow the rules\u2014they are usually right.",
+    "difficulty": "medium"
+  }
+]

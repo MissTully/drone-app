@@ -1,0 +1,97 @@
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.stem {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin: 1.1rem 0 1rem;
+}
+
+.choices {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.choice {
+  text-align: left;
+  min-height: 52px;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg-card);
+  color: var(--text);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.choice:hover:not(:disabled) {
+  background: var(--bg-card-hover);
+}
+
+.choiceSelected {
+  border-color: var(--gold);
+  box-shadow: inset 0 0 0 1px var(--gold);
+}
+
+.choiceCorrect {
+  background: var(--good-bg);
+  border-color: var(--good);
+}
+
+.choiceWrong {
+  background: var(--bad-bg);
+  border-color: var(--bad);
+}
+
+.letter {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--gold);
+}
+
+.feedback {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.ok {
+  background: var(--good-bg);
+  border-color: #2f8f62;
+}
+
+.no {
+  background: var(--bad-bg);
+  border-color: #a14b42;
+}
+
+.feedbackTitle {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.unanswered {
+  color: var(--muted);
+  font-size: 0.85rem;
+}

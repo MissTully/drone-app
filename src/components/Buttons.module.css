@@ -1,0 +1,53 @@
+.primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 650;
+  background: var(--gold);
+  color: #1a1406;
+}
+
+.primary:hover {
+  background: #ffc44d;
+}
+
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-weight: 650;
+  background: transparent;
+  color: var(--text);
+}
+
+.secondary:hover {
+  background: var(--bg-card);
+}
+
+.ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 44px;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 650;
+  background: transparent;
+  color: var(--muted);
+}
+
+.ghost:hover {
+  color: var(--text);
+}
