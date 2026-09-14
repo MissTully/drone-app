@@ -60,12 +60,14 @@ export function Layout({ children }: { children: ReactNode }) {
           rel="noopener noreferrer"
         >
           <span>Made by</span>
-          <img
-            className={styles.creditLogo}
-            src="/encountive-logo.png"
-            alt="Encountive"
-            height={32}
-          />
+          <span className={styles.creditMark}>
+            <img
+              className={styles.creditLogo}
+              src="/encountive-logo.png"
+              alt="Encountive"
+              height={32}
+            />
+          </span>
         </a>
       </footer>
     </div>

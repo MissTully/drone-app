@@ -130,6 +130,14 @@
   color: var(--text);
 }
 
+.creditMark {
+  display: inline-flex;
+  align-items: center;
+  background: #f4f7fb;
+  border-radius: 8px;
+  padding: 0.2rem 0.4rem;
+}
+
 .creditLogo {
   height: 32px;
   width: auto;
