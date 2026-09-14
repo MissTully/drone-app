@@ -28,7 +28,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/practice" element={<TopicPicker />} />
         <Route path="/practice/:topicId" element={<QuizPlayer />} />
-        <Route path="/modules" element={<Navigate to="/modules/regulations" replace />} />
+        <Route path="/modules" element={<Modules />} />
         <Route path="/modules/:topicId" element={<Modules />} />
         <Route path="/test" element={<QuizPlayer />} />
         <Route path="/retry" element={<QuizPlayer />} />

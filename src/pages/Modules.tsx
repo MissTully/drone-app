@@ -8,6 +8,7 @@ import { letterForIndex } from '../lib/quiz'
 import type { TopicId } from '../types'
 import btn from '../components/Buttons.module.css'
 import quizStyles from './QuizPlayer.module.css'
+import picker from './TopicPicker.module.css'
 import styles from './Modules.module.css'
 
 const MODULE_VIDEO_NOTE =
@@ -19,17 +20,72 @@ function isTopicId(value: string | undefined): value is TopicId {
 
 export function Modules() {
   const { topicId } = useParams()
-  const navigate = useNavigate()
-  const selected = isTopicId(topicId) ? topicId : 'regulations'
-  const mod = getModule(selected)
+  if (!topicId) return <ModulesIndex />
+  if (!isTopicId(topicId)) {
+    return (
+      <div>
+        <h1 className={styles.title}>Unknown module</h1>
+        <p className={styles.lede}>Choose one of the nine ACS-aligned topics from the modules list.</p>
+        <p className={styles.footerLinks}>
+          <Link className={btn.primary} to="/modules">
+            All modules
+          </Link>
+        </p>
+      </div>
+    )
+  }
+  return <ModuleDetail topicId={topicId} />
+}
 
+function ModulesIndex() {
   return (
     <div>
       <p className={styles.kicker}>Learn</p>
       <h1 className={styles.title}>Study modules</h1>
       <p className={styles.lede}>
-        Pick an ACS topic. Watch the lesson, review key points and vocabulary, then take a short
-        three-question check. Module quizzes are separate from the 225-question practice bank.
+        The same nine ACS topics as practice. Each module has a video lesson, key points,
+        vocabulary, a short explanation, and a three-question check. Module quizzes are separate
+        from the 225-question practice bank.
+      </p>
+      <div className={styles.stack}>
+        <Disclaimer />
+        <aside className={styles.note} role="note">
+          {MODULE_VIDEO_NOTE}
+        </aside>
+      </div>
+      <div className={picker.grid}>
+        {TOPICS.map((topic) => {
+          const mod = getModule(topic.id)
+          return (
+            <Link key={topic.id} className={picker.card} to={`/modules/${topic.id}`}>
+              <span className={picker.label}>{topic.label}</span>
+              <span className={picker.blurb}>{topic.blurb}</span>
+              <span className={picker.meta}>
+                Video + 3-question quiz · {mod.youtubeChannel}
+              </span>
+            </Link>
+          )
+        })}
+      </div>
+      <p className={styles.footerLinks}>
+        <Link className={btn.ghost} to="/">
+          Back home
+        </Link>
+      </p>
+    </div>
+  )
+}
+
+function ModuleDetail({ topicId }: { topicId: TopicId }) {
+  const navigate = useNavigate()
+  const mod = getModule(topicId)
+
+  return (
+    <div>
+      <p className={styles.kicker}>Learn</p>
+      <h1 className={styles.title}>{mod.title}</h1>
+      <p className={styles.lede}>
+        Watch the lesson, review key points and vocabulary, then take a short three-question check.
       </p>
       <div className={styles.stack}>
         <Disclaimer />
@@ -38,74 +94,80 @@ export function Modules() {
         </aside>
       </div>
 
-      <label className={styles.picker}>
-        <span>Topic</span>
-        <select
-          value={selected}
-          onChange={(event) => navigate(`/modules/${event.target.value}`)}
-          aria-label="Select a study module topic"
-        >
-          {TOPICS.map((topic) => (
-            <option key={topic.id} value={topic.id}>
-              {topic.label}
-            </option>
-          ))}
-        </select>
-      </label>
-
-      {topicId && !isTopicId(topicId) ? (
-        <p className={styles.lede}>Unknown topic. Choose one of the nine ACS topics above.</p>
-      ) : (
-        <article className={styles.module} aria-labelledby="module-heading">
-          <h2 id="module-heading">{mod.title}</h2>
-          <p className={styles.videoMeta}>
-            {mod.youtubeTitle} · {mod.youtubeChannel}
-          </p>
-          <div className={styles.embedWrap}>
-            <iframe
-              className={styles.embed}
-              title={mod.youtubeTitle}
-              src={`https://www.youtube-nocookie.com/embed/${mod.youtubeVideoId}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
-          </div>
-
-          <section className={styles.section}>
-            <h3>Key points</h3>
-            <ul>
-              {mod.keyPoints.map((point) => (
-                <li key={point}>{point}</li>
-              ))}
-            </ul>
-          </section>
-
-          <section className={styles.section}>
-            <h3>Vocabulary</h3>
-            <dl className={styles.vocab}>
-              {mod.vocabulary.map((item) => (
-                <div key={item.term}>
-                  <dt>{item.term}</dt>
-                  <dd>{item.definition}</dd>
-                </div>
-              ))}
-            </dl>
-          </section>
-
-          <section className={styles.section}>
-            <h3>Explanation</h3>
-            {mod.explanation.map((paragraph) => (
-              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+      <div className={styles.switcher}>
+        <label className={styles.picker}>
+          <span>Topic</span>
+          <select
+            value={topicId}
+            onChange={(event) => navigate(`/modules/${event.target.value}`)}
+            aria-label="Select a study module topic"
+          >
+            {TOPICS.map((topic) => (
+              <option key={topic.id} value={topic.id}>
+                {topic.label}
+              </option>
             ))}
-          </section>
+          </select>
+        </label>
+        <Link className={btn.ghost} to="/modules">
+          All modules
+        </Link>
+      </div>
 
-          <ModuleQuiz key={mod.topicId} topicId={mod.topicId} />
-        </article>
-      )}
+      <article className={styles.module} aria-labelledby="module-heading">
+        <h2 id="module-heading" className="sr-only">
+          {mod.title} module
+        </h2>
+        <p className={styles.videoMeta}>
+          {mod.youtubeTitle} · {mod.youtubeChannel}
+        </p>
+        <div className={styles.embedWrap}>
+          <iframe
+            className={styles.embed}
+            title={mod.youtubeTitle}
+            src={`https://www.youtube-nocookie.com/embed/${mod.youtubeVideoId}`}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
+
+        <section className={styles.section}>
+          <h3>Key points</h3>
+          <ul>
+            {mod.keyPoints.map((point) => (
+              <li key={point}>{point}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section className={styles.section}>
+          <h3>Vocabulary</h3>
+          <dl className={styles.vocab}>
+            {mod.vocabulary.map((item) => (
+              <div key={item.term}>
+                <dt>{item.term}</dt>
+                <dd>{item.definition}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        <section className={styles.section}>
+          <h3>Explanations</h3>
+          {mod.explanation.map((paragraph) => (
+            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+          ))}
+        </section>
+
+        <ModuleQuiz key={mod.topicId} topicId={mod.topicId} />
+      </article>
 
       <p className={styles.footerLinks}>
-        <Link className={btn.ghost} to={`/practice/${selected}`}>
+        <Link className={btn.ghost} to="/modules">
+          All modules
+        </Link>
+        <Link className={btn.ghost} to={`/practice/${topicId}`}>
           Practice this topic
         </Link>
         <Link className={btn.ghost} to="/">

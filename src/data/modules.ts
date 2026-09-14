@@ -818,10 +818,13 @@ function isStudyModule(value: unknown): value is StudyModule {
     mod.youtubeVideoId.length > 0 &&
     Array.isArray(mod.keyPoints) &&
     mod.keyPoints.length >= 5 &&
+    mod.keyPoints.length <= 8 &&
     Array.isArray(mod.vocabulary) &&
     mod.vocabulary.length >= 6 &&
+    mod.vocabulary.length <= 10 &&
     Array.isArray(mod.explanation) &&
     mod.explanation.length >= 1 &&
+    mod.explanation.length <= 3 &&
     Array.isArray(mod.quiz) &&
     mod.quiz.length === 3
   )
@@ -844,7 +847,11 @@ function loadModules(): StudyModule[] {
     for (const item of mod.quiz) {
       if (quizIds.has(item.id)) throw new Error(`Duplicate module quiz id ${item.id}`)
       quizIds.add(item.id)
-      if (item.choices.length !== 4 || item.reference.trim().length === 0) {
+      if (
+        item.choices.length !== 4 ||
+        item.reference.trim().length === 0 ||
+        item.explanation.trim().length === 0
+      ) {
         throw new Error(`Invalid quiz item ${item.id}`)
       }
     }

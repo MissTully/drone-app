@@ -35,8 +35,17 @@
 .picker {
   display: grid;
   gap: 0.4rem;
-  margin: 0 0 1.25rem;
+  margin: 0;
   font-weight: 650;
+  flex: 1;
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
 }
 
 .picker select {

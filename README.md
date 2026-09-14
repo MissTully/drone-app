@@ -22,7 +22,7 @@ Client-only React + Vite + TypeScript. No backend or account is required. Progre
 
 ## Modes
 
-- **Study modules** (`/modules`) — choose one of nine ACS-aligned topics from a dropdown. Each module has a YouTube embed, key points, vocabulary, a short explanation, and a 3-question check. Module quizzes are separate from the practice bank.
+- **Study modules** (`/modules`) — index of the same nine ACS-aligned topics as practice. Each module has a YouTube embed, key points, vocabulary, a short explanation, and a 3-question check. Switch topics from the list or the detail-page dropdown. Module quizzes are separate from the practice bank.
 - **Practice by topic** (`/practice`) — choose one of nine ACS-aligned topics. Questions are shuffled (25 per session, the full topic set). After each answer you see correct/incorrect plus an explanation and reference, then Continue.
 - **Practice test** (`/test`) — 60 questions mixed across topics, sampled in proportion to the bank. **2-hour countdown** with auto-submit at 0:00. No per-question feedback until Results. **Pass at 70%.**
 
@@ -44,8 +44,8 @@ Study module content lives in `src/data/modules.ts` (one module per topic). Vide
 | Route | Screen |
 | --- | --- |
 | `/` | Home — modules, practice, test, disclaimer, recent/best scores |
-| `/modules` | Study modules (redirects to `/modules/regulations`) |
-| `/modules/:topicId` | Module for one topic: video, notes, 3-question quiz |
+| `/modules` | Study modules index — nine topics, same labels as practice |
+| `/modules/:topicId` | Module detail: video, key points, vocabulary, explanation, 3-question quiz |
 | `/practice` | Topic picker |
 | `/practice/:topicId` | Practice quiz player |
 | `/test` | Timed practice test |
