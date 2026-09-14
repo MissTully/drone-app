@@ -1,99 +1,157 @@
 import { Link } from 'react-router-dom'
-import { Disclaimer } from '../components/Disclaimer'
-import { useQuiz } from '../context/QuizContext'
-import { QUESTION_BANK } from '../data/bank'
-import { TOPICS, TOPIC_LABELS } from '../data/topics'
 import { loadProgress } from '../lib/storage'
-import type { TopicId } from '../types'
 import btn from '../components/Buttons.module.css'
 import styles from './Home.module.css'
 
+const FEATURES = [
+  {
+    title: 'Study modules',
+    body: 'Pick a topic from the dropdown. Watch a training video, hit key points and vocabulary, read the explanation, then take a 3-question check.',
+  },
+  {
+    title: 'Practice by topic',
+    body: '25 FAA-style questions per topic (225 total), with rationales and references after each answer.',
+  },
+  {
+    title: 'Timed practice test',
+    body: '60 questions. 2 hours. 70% to pass. No mid-test hints, just like test day.',
+  },
+  {
+    title: 'Retry what you missed',
+    body: 'Turn wrong answers into your next session.',
+  },
+]
+
+const TOPICS = [
+  'Regulations',
+  'Airspace and flight restrictions',
+  'Weather',
+  'Loading and performance',
+  'Operations and emergencies',
+  'Airport operations',
+  'Radio communications',
+  'Maintenance and preflight',
+  'Human factors and ADM',
+]
+
+const STEPS = [
+  'Open a module and learn the topic',
+  'Practice that topic until it sticks',
+  'Take a full timed practice test',
+  'Review misses. Repeat.',
+]
+
 function formatScore(value: number | null): string {
-  return value === null ? '—' : `${value}%`
+  return value === null ? '-' : `${value}%`
 }
 
 export function Home() {
-  const { startTest } = useQuiz()
   const progress = loadProgress()
-  const topicRows = TOPICS.map((topic) => {
-    const stat = progress.topicStats[topic.id]
-    const accuracy =
-      stat && stat.attempted > 0 ? Math.round((stat.correct / stat.attempted) * 100) : null
-    return { ...topic, attempted: stat?.attempted ?? 0, accuracy }
-  })
+  const hasScores =
+    progress.lastPracticeScore !== null ||
+    progress.lastTestScore !== null ||
+    progress.bestTestScore !== null
 
   return (
-    <div>
+    <div className={styles.landing}>
       <section className={styles.hero}>
-        <p className={styles.kicker}>FAA Part 107 · Commercial sUAS</p>
-        <h1 className={styles.title}>Study with topic drills and full-length practice tests.</h1>
+        <p className={styles.kicker}>FAA Part 107 study aid</p>
+        <h1 className={styles.title}>Remote Possibilities</h1>
         <p className={styles.lede}>
-          Learn with topic modules, drill the 225-question bank, then sit a 60-question timed exam
-          with a 70% pass line. Progress stays on this device.
+          Study smarter. Fly ready. Topic modules, practice quizzes, and timed tests built around
+          the ACS, so you walk into the knowledge test prepared.
         </p>
-        <Disclaimer />
-      </section>
-
-      <section className={styles.modes} aria-label="Study modes">
-        <article className={styles.card}>
-          <h2>Study modules</h2>
-          <p className={`${styles.meta} ${styles.grow}`}>
-            Open the Modules section and pick a topic from the dropdown. Video, notes, and a
-            3-question check — separate from Practice.
-          </p>
+        <div className={styles.ctaRow}>
           <Link className={btn.primary} to="/modules">
-            Open modules
+            Start studying free
           </Link>
-        </article>
-        <article className={styles.card}>
-          <h2>Practice by topic</h2>
-          <p className={`${styles.meta} ${styles.grow}`}>
-            Pick one of nine ACS-aligned topics. Each session uses all 25 questions for that topic,
-            with feedback after every answer.
-          </p>
-          <Link className={btn.primary} to="/practice">
-            Choose a topic
+          <Link className={btn.secondary} to="/test">
+            Take a practice test
           </Link>
-        </article>
-        <article className={styles.card}>
-          <h2>Practice test</h2>
-          <p className={`${styles.meta} ${styles.grow}`}>
-            60 mixed questions, 2-hour countdown, no hints until the end. Pass at 70% or better.
-            Bank size: {QUESTION_BANK.length} unique items.
+        </div>
+        <p className={styles.micro}>No account. Progress stays on your device.</p>
+      </section>
+
+      <p className={styles.trust}>
+        Built for the Remote Pilot (small UAS) knowledge test · ACS-aligned topics · Free to use
+      </p>
+
+      <section className={styles.split}>
+        <article className={styles.proseCard}>
+          <h2>The Part 107 test shouldn’t feel like a fogged-in approach</h2>
+          <p>
+            Between airspace charts, METARs, and regs, it’s easy to study hard and still miss what
+            the exam actually asks. You need structure, reps, and feedback, not another 200-page PDF
+            you won’t finish.
           </p>
-          <button type="button" className={btn.primary} onClick={() => startTest()}>
-            Start 60-question test
-          </button>
+        </article>
+        <article className={styles.proseCard}>
+          <h2>One app. Learn, practice, prove it.</h2>
+          <p>
+            Remote Possibilities mirrors how good pilots prep: learn the topic, check your
+            understanding, then sit a timed practice test when you’re ready.
+          </p>
         </article>
       </section>
 
-      <h2>Scores</h2>
-      <div className={styles.scores}>
-        <div className={styles.stat}>
-          <div className={styles.statLabel}>Last practice</div>
-          <div className={styles.statValue}>{formatScore(progress.lastPracticeScore)}</div>
-        </div>
-        <div className={styles.stat}>
-          <div className={styles.statLabel}>Last test</div>
-          <div className={styles.statValue}>{formatScore(progress.lastTestScore)}</div>
-        </div>
-        <div className={styles.stat}>
-          <div className={styles.statLabel}>Best test</div>
-          <div className={styles.statValue}>{formatScore(progress.bestTestScore)}</div>
-        </div>
-      </div>
-
-      <h2>Topic progress</h2>
-      <div className={styles.topics}>
-        {topicRows.map((row) => (
-          <div className={styles.topicRow} key={row.id}>
-            <span>{TOPIC_LABELS[row.id as TopicId]}</span>
-            <span className={styles.muted}>
-              {row.attempted === 0 ? 'No attempts yet' : `${row.accuracy}% · ${row.attempted} answered`}
-            </span>
-          </div>
+      <section className={styles.features} aria-label="Features">
+        {FEATURES.map((feature, index) => (
+          <article className={styles.featureCard} key={feature.title}>
+            <span className={styles.featureIndex}>{index + 1}</span>
+            <h2>{feature.title}</h2>
+            <p>{feature.body}</p>
+          </article>
         ))}
-      </div>
+      </section>
+
+      <section className={styles.topicsSection} aria-labelledby="topics-heading">
+        <h2 id="topics-heading">Topics covered</h2>
+        <ul className={styles.topicChips}>
+          {TOPICS.map((topic) => (
+            <li key={topic}>{topic}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className={styles.stepsSection} aria-labelledby="steps-heading">
+        <h2 id="steps-heading">How it works</h2>
+        <ol className={styles.steps}>
+          {STEPS.map((step, index) => (
+            <li key={step}>
+              <span className={styles.stepNum}>{index + 1}</span>
+              <span>{step}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      {hasScores ? (
+        <section className={styles.scores} aria-label="Recent scores">
+          <div className={styles.stat}>
+            <div className={styles.statLabel}>Last practice</div>
+            <div className={styles.statValue}>{formatScore(progress.lastPracticeScore)}</div>
+          </div>
+          <div className={styles.stat}>
+            <div className={styles.statLabel}>Last test</div>
+            <div className={styles.statValue}>{formatScore(progress.lastTestScore)}</div>
+          </div>
+          <div className={styles.stat}>
+            <div className={styles.statLabel}>Best test</div>
+            <div className={styles.statValue}>{formatScore(progress.bestTestScore)}</div>
+          </div>
+        </section>
+      ) : null}
+
+      <section className={styles.finalCta}>
+        <h2>Cleared for study</h2>
+        <p>
+          Your remote pilot certificate starts with knowing the material. Remote Possibilities is
+          here for the reps.
+        </p>
+        <Link className={btn.primary} to="/modules">
+          Start studying free
+        </Link>
+      </section>
     </div>
   )
 }

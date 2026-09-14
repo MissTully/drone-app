@@ -69,7 +69,7 @@ export function Results() {
       <section className={styles.section}>
         <h2>Missed questions ({result.missed.length})</h2>
         {result.missed.length === 0 ? (
-          <p className={styles.sub}>Nice work — nothing missed in this session.</p>
+          <p className={styles.sub}>Nice work. Nothing missed in this session.</p>
         ) : (
           <div className={styles.missed}>
             {result.missed.map((item) => {
