@@ -8,7 +8,6 @@ import { letterForIndex } from '../lib/quiz'
 import type { TopicId } from '../types'
 import btn from '../components/Buttons.module.css'
 import quizStyles from './QuizPlayer.module.css'
-import picker from './TopicPicker.module.css'
 import styles from './Modules.module.css'
 
 const MODULE_VIDEO_NOTE =
@@ -20,72 +19,22 @@ function isTopicId(value: string | undefined): value is TopicId {
 
 export function Modules() {
   const { topicId } = useParams()
-  if (!topicId) return <ModulesIndex />
-  if (!isTopicId(topicId)) {
-    return (
-      <div>
-        <h1 className={styles.title}>Unknown module</h1>
-        <p className={styles.lede}>Choose one of the nine ACS-aligned topics from the modules list.</p>
-        <p className={styles.footerLinks}>
-          <Link className={btn.primary} to="/modules">
-            All modules
-          </Link>
-        </p>
-      </div>
-    )
-  }
-  return <ModuleDetail topicId={topicId} />
-}
+  const navigate = useNavigate()
+  const selected = isTopicId(topicId) ? topicId : 'regulations'
+  const invalid = Boolean(topicId) && !isTopicId(topicId)
+  const mod = invalid ? null : getModule(selected)
 
-function ModulesIndex() {
+  const onSelectTopic = (next: string) => {
+    navigate(`/modules/${next}`)
+  }
+
   return (
     <div>
       <p className={styles.kicker}>Learn</p>
       <h1 className={styles.title}>Study modules</h1>
       <p className={styles.lede}>
-        The same nine ACS topics as practice. Each module has a video lesson, key points,
-        vocabulary, a short explanation, and a three-question check. Module quizzes are separate
-        from the 225-question practice bank.
-      </p>
-      <div className={styles.stack}>
-        <Disclaimer />
-        <aside className={styles.note} role="note">
-          {MODULE_VIDEO_NOTE}
-        </aside>
-      </div>
-      <div className={picker.grid}>
-        {TOPICS.map((topic) => {
-          const mod = getModule(topic.id)
-          return (
-            <Link key={topic.id} className={picker.card} to={`/modules/${topic.id}`}>
-              <span className={picker.label}>{topic.label}</span>
-              <span className={picker.blurb}>{topic.blurb}</span>
-              <span className={picker.meta}>
-                Video + 3-question quiz · {mod.youtubeChannel}
-              </span>
-            </Link>
-          )
-        })}
-      </div>
-      <p className={styles.footerLinks}>
-        <Link className={btn.ghost} to="/">
-          Back home
-        </Link>
-      </p>
-    </div>
-  )
-}
-
-function ModuleDetail({ topicId }: { topicId: TopicId }) {
-  const navigate = useNavigate()
-  const mod = getModule(topicId)
-
-  return (
-    <div>
-      <p className={styles.kicker}>Learn</p>
-      <h1 className={styles.title}>{mod.title}</h1>
-      <p className={styles.lede}>
-        Watch the lesson, review key points and vocabulary, then take a short three-question check.
+        Choose a topic from the dropdown. Practice and the timed practice test stay on their own
+        pages. Module quizzes are separate from the 225-question practice bank.
       </p>
       <div className={styles.stack}>
         <Disclaimer />
@@ -94,82 +43,84 @@ function ModuleDetail({ topicId }: { topicId: TopicId }) {
         </aside>
       </div>
 
-      <div className={styles.switcher}>
-        <label className={styles.picker}>
-          <span>Topic</span>
-          <select
-            value={topicId}
-            onChange={(event) => navigate(`/modules/${event.target.value}`)}
-            aria-label="Select a study module topic"
-          >
-            {TOPICS.map((topic) => (
-              <option key={topic.id} value={topic.id}>
-                {topic.label}
-              </option>
-            ))}
-          </select>
-        </label>
-        <Link className={btn.ghost} to="/modules">
-          All modules
-        </Link>
-      </div>
-
-      <article className={styles.module} aria-labelledby="module-heading">
-        <h2 id="module-heading" className="sr-only">
-          {mod.title} module
-        </h2>
-        <p className={styles.videoMeta}>
-          {mod.youtubeTitle} · {mod.youtubeChannel}
-        </p>
-        <div className={styles.embedWrap}>
-          <iframe
-            className={styles.embed}
-            title={mod.youtubeTitle}
-            src={`https://www.youtube-nocookie.com/embed/${mod.youtubeVideoId}`}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            referrerPolicy="strict-origin-when-cross-origin"
-          />
-        </div>
-
-        <section className={styles.section}>
-          <h3>Key points</h3>
-          <ul>
-            {mod.keyPoints.map((point) => (
-              <li key={point}>{point}</li>
-            ))}
-          </ul>
-        </section>
-
-        <section className={styles.section}>
-          <h3>Vocabulary</h3>
-          <dl className={styles.vocab}>
-            {mod.vocabulary.map((item) => (
-              <div key={item.term}>
-                <dt>{item.term}</dt>
-                <dd>{item.definition}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-
-        <section className={styles.section}>
-          <h3>Explanations</h3>
-          {mod.explanation.map((paragraph) => (
-            <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+      <label className={styles.picker}>
+        <span>Topic</span>
+        <select
+          value={invalid ? '' : selected}
+          onChange={(event) => onSelectTopic(event.target.value)}
+          aria-label="Select a study module topic"
+        >
+          {invalid ? (
+            <option value="" disabled>
+              Choose a topic
+            </option>
+          ) : null}
+          {TOPICS.map((topic) => (
+            <option key={topic.id} value={topic.id}>
+              {topic.label}
+            </option>
           ))}
-        </section>
+        </select>
+      </label>
 
-        <ModuleQuiz key={mod.topicId} topicId={mod.topicId} />
-      </article>
+      {invalid || !mod ? (
+        <p className={styles.lede}>Unknown topic. Pick one of the nine ACS topics from the dropdown.</p>
+      ) : (
+        <article className={styles.module} aria-labelledby="module-heading">
+          <h2 id="module-heading">{mod.title}</h2>
+          <p className={styles.videoMeta}>
+            {mod.youtubeTitle} · {mod.youtubeChannel}
+          </p>
+          <div className={styles.embedWrap}>
+            <iframe
+              key={mod.youtubeVideoId}
+              className={styles.embed}
+              title={mod.youtubeTitle}
+              src={`https://www.youtube-nocookie.com/embed/${mod.youtubeVideoId}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              referrerPolicy="strict-origin-when-cross-origin"
+            />
+          </div>
+
+          <section className={styles.section}>
+            <h3>Key points</h3>
+            <ul>
+              {mod.keyPoints.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className={styles.section}>
+            <h3>Vocabulary</h3>
+            <dl className={styles.vocab}>
+              {mod.vocabulary.map((item) => (
+                <div key={item.term}>
+                  <dt>{item.term}</dt>
+                  <dd>{item.definition}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+
+          <section className={styles.section}>
+            <h3>Explanations</h3>
+            {mod.explanation.map((paragraph) => (
+              <p key={paragraph.slice(0, 48)}>{paragraph}</p>
+            ))}
+          </section>
+
+          <ModuleQuiz key={mod.topicId} topicId={mod.topicId} />
+        </article>
+      )}
 
       <p className={styles.footerLinks}>
-        <Link className={btn.ghost} to="/modules">
-          All modules
-        </Link>
-        <Link className={btn.ghost} to={`/practice/${topicId}`}>
-          Practice this topic
-        </Link>
+        {mod ? (
+          <Link className={btn.ghost} to={`/practice/${mod.topicId}`}>
+            Practice this topic
+          </Link>
+        ) : null}
         <Link className={btn.ghost} to="/">
           Home
         </Link>
@@ -252,8 +203,8 @@ function ModuleQuiz({ topicId }: { topicId: TopicId }) {
       <div className={quizStyles.choices} role="listbox" aria-label="Answer choices">
         {question.choices.map((choice, choiceIndex) => {
           const classes = [quizStyles.choice]
-          const selected = pending ?? saved
-          if (selected === choiceIndex) classes.push(quizStyles.choiceSelected)
+          const selectedChoice = pending ?? saved
+          if (selectedChoice === choiceIndex) classes.push(quizStyles.choiceSelected)
           if (showFeedback && choiceIndex === question.correctIndex) {
             classes.push(quizStyles.choiceCorrect)
           }

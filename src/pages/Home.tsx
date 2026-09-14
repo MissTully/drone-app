@@ -38,7 +38,8 @@ export function Home() {
         <article className={styles.card}>
           <h2>Study modules</h2>
           <p className={`${styles.meta} ${styles.grow}`}>
-            Nine ACS topics with a video lesson, key points, vocabulary, and a 3-question check.
+            Open the Modules section and pick a topic from the dropdown. Video, notes, and a
+            3-question check — separate from Practice.
           </p>
           <Link className={btn.primary} to="/modules">
             Open modules
