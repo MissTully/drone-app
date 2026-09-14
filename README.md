@@ -43,7 +43,7 @@ Study module content lives in `src/data/modules.ts` (one module per topic). Vide
 
 | Route | Screen |
 | --- | --- |
-| `/` | Home — modules, practice, test, disclaimer, recent/best scores |
+| `/` | Home — marketing landing for Remote Possibilities, with CTAs into modules and the practice test |
 | `/modules` | Study modules — topic dropdown plus video, notes, and 3-question quiz |
 | `/modules/:topicId` | Same page with a topic preselected in the dropdown |
 | `/practice` | Topic picker |

@@ -22,14 +22,6 @@ export function Layout({ children }: { children: ReactNode }) {
         </NavLink>
         <nav className={styles.nav} aria-label="Primary">
           <NavLink
-            to="/practice"
-            className={({ isActive }) =>
-              isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
-            }
-          >
-            Practice
-          </NavLink>
-          <NavLink
             to="/modules"
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
@@ -38,18 +30,27 @@ export function Layout({ children }: { children: ReactNode }) {
             Modules
           </NavLink>
           <NavLink
+            to="/practice"
+            className={({ isActive }) =>
+              isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
+            }
+          >
+            Practice
+          </NavLink>
+          <NavLink
             to="/test"
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
             }
           >
-            Test
+            Practice Test
           </NavLink>
         </nav>
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
-        Study aid only · Not affiliated with the FAA · Questions are not official test items
+        Remote Possibilities is a study aid. Practice questions are not official FAA test items.
+        Embedded videos are third-party content and are not official FAA training.
       </footer>
     </div>
   )
