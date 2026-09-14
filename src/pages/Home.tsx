@@ -28,18 +28,27 @@ export function Home() {
         <p className={styles.kicker}>FAA Part 107 · Commercial sUAS</p>
         <h1 className={styles.title}>Study with topic drills and full-length practice tests.</h1>
         <p className={styles.lede}>
-          Build knowledge across the Airman Certification Standards, then sit a 60-question timed
-          exam with a 70% pass line. Progress stays on this device.
+          Learn with topic modules, drill the 225-question bank, then sit a 60-question timed exam
+          with a 70% pass line. Progress stays on this device.
         </p>
         <Disclaimer />
       </section>
 
       <section className={styles.modes} aria-label="Study modes">
         <article className={styles.card}>
+          <h2>Study modules</h2>
+          <p className={`${styles.meta} ${styles.grow}`}>
+            Nine ACS topics with a video lesson, key points, vocabulary, and a 3-question check.
+          </p>
+          <Link className={btn.primary} to="/modules">
+            Open modules
+          </Link>
+        </article>
+        <article className={styles.card}>
           <h2>Practice by topic</h2>
           <p className={`${styles.meta} ${styles.grow}`}>
-            Pick one of nine ACS-aligned topics. Get instant feedback and an explanation after each
-            question.
+            Pick one of nine ACS-aligned topics. Each session uses all 25 questions for that topic,
+            with feedback after every answer.
           </p>
           <Link className={btn.primary} to="/practice">
             Choose a topic

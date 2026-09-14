@@ -1,8 +1,8 @@
 # drone-app
 
-Study app for FAA Part 107 commercial drone certification. **v1 is quiz and practice tests only.**
+Study app for FAA Part 107 commercial drone certification. Quiz, practice tests, and topic study modules.
 
-**Disclaimer:** This is a study aid. Questions are not official FAA test items.
+**Disclaimer:** This is a study aid. Questions are not official FAA test items. Embedded YouTube videos are third-party content, not official FAA training.
 
 ## Run locally
 
@@ -22,25 +22,30 @@ Client-only React + Vite + TypeScript. No backend or account is required. Progre
 
 ## Modes
 
-- **Practice by topic** (`/practice`) — choose one of nine ACS-aligned topics. Questions are shuffled (up to 10 per session). After each answer you see correct/incorrect plus an explanation, then Continue.
+- **Study modules** (`/modules`) — choose one of nine ACS-aligned topics from a dropdown. Each module has a YouTube embed, key points, vocabulary, a short explanation, and a 3-question check. Module quizzes are separate from the practice bank.
+- **Practice by topic** (`/practice`) — choose one of nine ACS-aligned topics. Questions are shuffled (25 per session, the full topic set). After each answer you see correct/incorrect plus an explanation and reference, then Continue.
 - **Practice test** (`/test`) — 60 questions mixed across topics, sampled in proportion to the bank. **2-hour countdown** with auto-submit at 0:00. No per-question feedback until Results. **Pass at 70%.**
 
 ## Question bank
 
 Seed data lives in `src/data/questions.json`.
 
-- 9 topics, **150 unique questions** (~16–17 per topic)
+- 9 topics, **225 unique questions** (25 per topic)
 - Practice tests draw **60 unique** items sampled in proportion to the bank
 - Each item includes a teaching **rationale** and a **Reference** cite (CFR, AIM, ACS, AC, or handbook)
 - Items are original study-style questions aligned to ACS topic IDs. They are **not** copied from the FAA knowledge test.
 
 Topic IDs: `regulations`, `airspace`, `weather`, `loading-performance`, `operations-emergency`, `airport-operations`, `radio`, `maintenance-preflight`, `human-factors-adm`
 
+Study module content lives in `src/data/modules.ts` (one module per topic). Videos are embedded from YouTube; the app does not download or host video files.
+
 ## Screens
 
 | Route | Screen |
 | --- | --- |
-| `/` | Home — both modes, disclaimer, recent/best scores |
+| `/` | Home — modules, practice, test, disclaimer, recent/best scores |
+| `/modules` | Study modules (redirects to `/modules/regulations`) |
+| `/modules/:topicId` | Module for one topic: video, notes, 3-question quiz |
 | `/practice` | Topic picker |
 | `/practice/:topicId` | Practice quiz player |
 | `/test` | Timed practice test |

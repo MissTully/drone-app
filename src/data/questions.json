@@ -2248,5 +2248,1130 @@
     "explanation": "The 3P model is Perceive, Process, Perform: perceive hazards, process them against standards, perform the best action, then loop. It is not PAVE and not an aircraft-control mnemonic.",
     "difficulty": "medium",
     "reference": "PHAK Ch. 2; FAA-H-8083-2; ACS UA.I.B.K3"
+  },
+  {
+    "id": "reg-018",
+    "topic": "regulations",
+    "stem": "Who is directly responsible for, and is the final authority as to, the operation of a small unmanned aircraft?",
+    "choices": [
+      "The visual observer",
+      "The remote pilot in command",
+      "The person who scheduled the job",
+      "ATC, whenever the flight is in Class G"
+    ],
+    "correctIndex": 1,
+    "explanation": "The remote PIC is directly responsible for and has final authority over the operation. A visual observer supports see-and-avoid but does not take PIC authority. A client or scheduler cannot override Part 107, and ATC does not assume PIC duties in Class G.",
+    "difficulty": "easy",
+    "reference": "14 CFR \u00a7107.19; ACS UA.I.A.K3"
+  },
+  {
+    "id": "reg-019",
+    "topic": "regulations",
+    "stem": "In addition to the 8-hour \u201cbottle to throttle\u201d rule, a remote PIC may not operate a small UAS with a blood alcohol concentration of:",
+    "choices": [
+      "0.02 percent or greater",
+      "0.04 percent or greater",
+      "0.08 percent or greater",
+      "Any detectable amount, with no numeric limit"
+    ],
+    "correctIndex": 1,
+    "explanation": "Part 107 incorporates the alcohol limits in 14 CFR \u00a791.17: no acting as remote PIC within 8 hours after drinking, while under the influence, or with a BAC of 0.04% or more. The 0.08% highway DUI number is not the aviation standard. There is a stated numeric BAC limit.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.27; 14 CFR \u00a791.17; ACS UA.I.A.K5"
+  },
+  {
+    "id": "reg-020",
+    "topic": "regulations",
+    "stem": "A remote PIC who has a known medical condition that would interfere with safe operation of a small UAS:",
+    "choices": [
+      "May fly if a visual observer is used",
+      "May fly if the mission is shorter than 10 minutes",
+      "May not operate until the condition no longer interferes with safety",
+      "Must only avoid night operations"
+    ],
+    "correctIndex": 2,
+    "explanation": "You may not act as remote PIC or manipulate the controls if you know or have reason to know of a physical or mental condition that would interfere with safe operation. Using a VO, shortening the flight, or limiting to day does not waive that prohibition.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.17; ACS UA.I.A.K4"
+  },
+  {
+    "id": "reg-021",
+    "topic": "regulations",
+    "stem": "Carriage of hazardous material on a small unmanned aircraft under Part 107 is:",
+    "choices": [
+      "Allowed if the package is labeled \u201cORM-D\u201d",
+      "Allowed below 400 feet AGL",
+      "Generally prohibited",
+      "Required for any commercial delivery"
+    ],
+    "correctIndex": 2,
+    "explanation": "A small unmanned aircraft may not carry hazardous material. HAZMAT exceptions that apply to some manned operations do not open Part 107 to routine dangerous-goods carriage. Altitude or commercial purpose does not create an exception.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.36; ACS UA.I.B.K1"
+  },
+  {
+    "id": "reg-022",
+    "topic": "regulations",
+    "stem": "Besides age and aeronautical knowledge, an applicant for a Remote Pilot Certificate with a small UAS rating must be able to:",
+    "choices": [
+      "Hold a Part 61 private pilot certificate",
+      "Read, speak, write, and understand the English language",
+      "Pass a first-class medical examination",
+      "Demonstrate 10 hours of dual sUAS instruction"
+    ],
+    "correctIndex": 1,
+    "explanation": "Eligibility includes the ability to read, speak, write, and understand English. A manned pilot certificate and FAA medical are not required for Part 107. Dual instruction hours are not an eligibility item in \u00a7107.61.",
+    "difficulty": "easy",
+    "reference": "14 CFR \u00a7107.61; ACS UA.I.A.K1"
+  },
+  {
+    "id": "reg-023",
+    "topic": "regulations",
+    "stem": "If an applicant fails the Part 107 aeronautical knowledge test, the applicant generally may not retest for:",
+    "choices": [
+      "24 hours",
+      "7 calendar days",
+      "14 calendar days",
+      "24 calendar months"
+    ],
+    "correctIndex": 2,
+    "explanation": "An applicant who fails may not apply for retesting for 14 calendar days. Twenty-four hours is far too short, seven days is a common distractor, and 24 calendar months is the recency interval for certificate privileges\u2014not the retest wait.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.71; ACS UA.I.A.K2"
+  },
+  {
+    "id": "reg-024",
+    "topic": "regulations",
+    "stem": "During a Part 107 operation, a small unmanned aircraft must not interfere with operations and traffic patterns at:",
+    "choices": [
+      "Towered airports only",
+      "Airports, heliports, and seaplane bases",
+      "Military airports only",
+      "International airports only"
+    ],
+    "correctIndex": 1,
+    "explanation": "You may not operate a small UA in a manner that interferes with operations and traffic patterns at any airport, heliport, or seaplane base. The rule is not limited to towered, military, or international fields.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.43; ACS UA.I.B.K8"
+  },
+  {
+    "id": "reg-025",
+    "topic": "regulations",
+    "stem": "Standard Remote ID for most small unmanned aircraft in the National Airspace System is primarily implemented under:",
+    "choices": [
+      "14 CFR Part 48 aircraft registration only",
+      "14 CFR Part 89",
+      "14 CFR Part 91 transponder rules",
+      "State motor-vehicle codes"
+    ],
+    "correctIndex": 1,
+    "explanation": "Remote ID performance and operating requirements are in 14 CFR Part 89 (standard Remote ID, broadcast module, or FAA-Recognized Identification Area). Part 48 covers registration marking, not the RID broadcast rule. Part 91 transponder rules and state vehicle codes are the wrong regimes.",
+    "difficulty": "hard",
+    "reference": "14 CFR Part 89; AC 107-2A; ACS UA.I.A.K8"
+  },
+  {
+    "id": "air-018",
+    "topic": "airspace",
+    "stem": "Before operating a small UAS in Class B airspace, a remote PIC must:",
+    "choices": [
+      "File an IFR flight plan",
+      "Obtain ATC authorization",
+      "Squawk 1200 and announce on 121.5",
+      "Remain below 200 feet AGL so authorization is never required"
+    ],
+    "correctIndex": 1,
+    "explanation": "Class B is controlled airspace; Part 107 requires ATC authorization (often via LAANC or DroneZone) before operating there. An IFR flight plan and a 1200 squawk are manned-aircraft practices, and a low altitude does not remove the Class B authorization requirement.",
+    "difficulty": "easy",
+    "reference": "14 CFR \u00a7107.41; ACS UA.II.A.K1"
+  },
+  {
+    "id": "air-019",
+    "topic": "airspace",
+    "stem": "Class C airspace around a towered airport:",
+    "choices": [
+      "Is uncontrolled; no authorization is ever needed",
+      "Requires ATC authorization for small UAS operations",
+      "May be entered if the UA stays below the Mode C veil only",
+      "Is depicted only on IFR enroute charts, not sectionals"
+    ],
+    "correctIndex": 1,
+    "explanation": "Class C is controlled. Small UAS operations there require ATC authorization. The Mode C veil is a transponder rule around some Class B airports and is not a substitute for 107.41 authorization. Class C is shown on VFR sectionals (typically a solid magenta line).",
+    "difficulty": "easy",
+    "reference": "14 CFR \u00a7107.41; AIM 3-2-4; ACS UA.II.A.K1"
+  },
+  {
+    "id": "air-020",
+    "topic": "airspace",
+    "stem": "The Washington, D.C. Flight Restricted Zone (FRZ) is best treated by a remote PIC as:",
+    "choices": [
+      "Class G where Part 107 flights are routine",
+      "Airspace where small UAS operations are generally prohibited without a special FAA/security authorization",
+      "A Military Operations Area that only advises of training",
+      "A 700-foot Class E transition area"
+    ],
+    "correctIndex": 1,
+    "explanation": "The DC FRZ is a tightly controlled security area. Civil small UAS operations there are generally prohibited except under specific FAA/security authorizations. It is not Class G, not a MOA, and not ordinary Class E transition airspace.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a793.335; 14 CFR \u00a7107.45; ACS UA.II.B.K1"
+  },
+  {
+    "id": "air-021",
+    "topic": "airspace",
+    "stem": "Class A airspace generally begins at:",
+    "choices": [
+      "700 feet AGL",
+      "1,200 feet AGL",
+      "10,000 feet MSL",
+      "18,000 feet MSL"
+    ],
+    "correctIndex": 3,
+    "explanation": "Class A typically extends from 18,000 feet MSL to FL600. Small UAS under Part 107 operate far below that. 700 and 1,200 AGL are common Class E floors; 10,000 MSL is a speed/transponder-related altitude, not the Class A floor.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a771.31; AIM 3-2-2; ACS UA.II.A.K1"
+  },
+  {
+    "id": "air-022",
+    "topic": "airspace",
+    "stem": "A National Security Area (NSA) depicted on a sectional chart indicates:",
+    "choices": [
+      "Uncontrolled airspace identical to Class G",
+      "Airspace where pilots are requested to avoid, and where flight may be prohibited by NOTAM when necessary",
+      "A parachute landing area that must be used",
+      "Automatic LAANC approval to any altitude"
+    ],
+    "correctIndex": 1,
+    "explanation": "NSAs request that pilots avoid the area for security. Flight may also be prohibited by NOTAM. They are not ordinary Class G, not drop zones, and they do not confer LAANC approval.",
+    "difficulty": "medium",
+    "reference": "AIM 3-4-8; ACS UA.II.B.K2"
+  },
+  {
+    "id": "air-023",
+    "topic": "airspace",
+    "stem": "The Mode C veil around some Class B airports means, for manned aircraft, a transponder with altitude reporting is generally required. For a Part 107 small UAS, that veil:",
+    "choices": [
+      "By itself authorizes flight in the Class B airspace",
+      "Does not replace the need for ATC authorization to operate in the associated Class B, C, D, or surface Class E airspace",
+      "Requires the sUAS to squawk 1200",
+      "Prohibits all Class G operations under the veil"
+    ],
+    "correctIndex": 1,
+    "explanation": "The Mode C veil is a transponder equipment rule for aircraft required to have transponders. It does not grant 107.41 authorization, and typical small UAS are not squawking 1200. Class G under the veil can still be used if other Part 107 rules are met and you stay out of the controlled airspace you are not authorized to enter.",
+    "difficulty": "hard",
+    "reference": "14 CFR \u00a791.215; 14 CFR \u00a7107.41; ACS UA.II.A.K2"
+  },
+  {
+    "id": "air-024",
+    "topic": "airspace",
+    "stem": "A Controlled Firing Area (CFA) is special use airspace that:",
+    "choices": [
+      "Is outlined in solid red on every sectional and always closed to sUAS",
+      "Is not depicted on charts; activities are suspended when an aircraft approaches",
+      "Requires a remote PIC to file a defense NOTAM before takeoff",
+      "Is identical to prohibited airspace P-40"
+    ],
+    "correctIndex": 1,
+    "explanation": "CFAs are not charted. The using agency must stop activities when an aircraft might be endangered, so they do not require the same charted avoidance as restricted or prohibited areas. They are not P-40 and do not impose a unique sUAS NOTAM filing duty.",
+    "difficulty": "hard",
+    "reference": "AIM 3-4-7; ACS UA.II.B.K2"
+  },
+  {
+    "id": "air-025",
+    "topic": "airspace",
+    "stem": "Unless other restrictions apply, operating a small UAS in Class G airspace under Part 107:",
+    "choices": [
+      "Still requires a LAANC authorization at any location",
+      "Does not require ATC authorization, but all other Part 107 rules still apply",
+      "Is allowed only below 100 feet AGL",
+      "Requires a transponder and ADS-B Out"
+    ],
+    "correctIndex": 1,
+    "explanation": "Class G is uncontrolled; 107.41 authorization is not required. You still need VLOS, weather minima, altitude limits, and any TFRs/NOTAMs. LAANC is for controlled airspace, 100 feet is not a Class G cap, and transponder/ADS-B Out are not Part 107 sUAS equipment rules.",
+    "difficulty": "easy",
+    "reference": "14 CFR \u00a7107.41; AIM 3-3-1; ACS UA.II.A.K1"
+  },
+  {
+    "id": "wx-018",
+    "topic": "weather",
+    "stem": "Ceiling is defined as the height above ground of the lowest layer of clouds that is:",
+    "choices": [
+      "Few (FEW) or scattered (SCT)",
+      "Broken (BKN) or overcast (OVC)",
+      "Reported only as SKC",
+      "Any cloud layer, including haze (HZ)"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ceiling is the AGL height of the lowest broken or overcast layer (or vertical visibility into an obscuration). FEW and SCT are not ceilings. SKC means sky clear. Haze is a visibility obstruction, not a ceiling layer.",
+    "difficulty": "medium",
+    "reference": "AIM 7-1-28; ACS UA.III.B.K1"
+  },
+  {
+    "id": "wx-019",
+    "topic": "weather",
+    "stem": "In a METAR, \u201cFG\u201d generally indicates fog with visibility:",
+    "choices": [
+      "Greater than 6 statute miles",
+      "Less than 5/8 statute mile",
+      "Exactly 3 statute miles, always",
+      "Unlimited, but with a ceiling"
+    ],
+    "correctIndex": 1,
+    "explanation": "FG is fog, used when visibility is less than 5/8 SM. BR (mist) covers 5/8 to 6 SM. Fog is not a 6 SM or unlimited condition, and it is not locked to 3 SM.",
+    "difficulty": "medium",
+    "reference": "AIM 7-1-28; Federal Meteorological Handbook No. 1; ACS UA.III.A.K2"
+  },
+  {
+    "id": "wx-020",
+    "topic": "weather",
+    "stem": "The standard temperature lapse rate in the troposphere is approximately:",
+    "choices": [
+      "1 \u00b0C per 1,000 feet",
+      "2 \u00b0C per 1,000 feet",
+      "5 \u00b0C per 1,000 feet",
+      "10 \u00b0C per 1,000 feet"
+    ],
+    "correctIndex": 1,
+    "explanation": "ISA uses about 2 \u00b0C (3.5 \u00b0F) per 1,000 feet in the troposphere. One degree is too shallow; 5 and 10 \u00b0C per thousand are far too steep and would mis-estimate density altitude.",
+    "difficulty": "medium",
+    "reference": "PHAK Chapter 4; ACS UA.III.B.K2"
+  },
+  {
+    "id": "wx-021",
+    "topic": "weather",
+    "stem": "The mature stage of a thunderstorm is generally the most hazardous to aircraft because it includes:",
+    "choices": [
+      "Only building cumulus with no precipitation",
+      "Updrafts and downdrafts, precipitation, and often gust fronts or hail",
+      "A decaying anvil with no vertical motion",
+      "Clear icing only at night"
+    ],
+    "correctIndex": 1,
+    "explanation": "The mature stage has both updrafts and downdrafts, rain reaching the surface, and the greatest turbulence, lightning, and hail risk. The towering-cumulus (cumulus) stage is mostly updraft; the dissipating stage is mostly downdraft as the storm collapses.",
+    "difficulty": "medium",
+    "reference": "PHAK Chapter 12; ACS UA.III.B.K4"
+  },
+  {
+    "id": "wx-022",
+    "topic": "weather",
+    "stem": "A METAR reports \u201cBKN015 OVC030.\u201d The ceiling is:",
+    "choices": [
+      "1,500 feet AGL",
+      "3,000 feet AGL",
+      "4,500 feet AGL",
+      "There is no ceiling because BKN is not a ceiling"
+    ],
+    "correctIndex": 0,
+    "explanation": "Broken is a ceiling. The lowest BKN or OVC layer is 1,500 feet AGL, so that is the ceiling. The overcast at 3,000 is a higher layer. BKN does count as a ceiling; adding the two heights is incorrect.",
+    "difficulty": "medium",
+    "reference": "AIM 7-1-28; ACS UA.III.A.K2"
+  },
+  {
+    "id": "wx-023",
+    "topic": "weather",
+    "stem": "Advection fog is most likely when:",
+    "choices": [
+      "Warm, moist air moves over a colder surface",
+      "The ground cools rapidly on a clear, calm night with no wind",
+      "Dry air is lifted over a mountain and warms on descent",
+      "A temperature inversion traps smoke only"
+    ],
+    "correctIndex": 0,
+    "explanation": "Advection fog forms when moist air moves over a cooler surface (classic coastal pattern) and usually needs some wind. Radiation fog is the clear, calm night case. Downslope warming dries air (chinook), and an inversion trapping smoke is haze/pollution, not advection fog.",
+    "difficulty": "hard",
+    "reference": "PHAK Chapter 12; ACS UA.III.B.K3"
+  },
+  {
+    "id": "wx-024",
+    "topic": "weather",
+    "stem": "In METAR wind group \u201c27015G25KT,\u201d the \u201cG25\u201d means:",
+    "choices": [
+      "The wind is from 025 degrees",
+      "Gusts reaching 25 knots",
+      "Visibility 2.5 statute miles",
+      "A 25-knot steady wind with no gusts"
+    ],
+    "correctIndex": 1,
+    "explanation": "G indicates peak gusts; here the sustained wind is 15 knots with gusts to 25 from 270\u00b0. 025 would be the direction group, visibility is a separate field, and 15\u2014not 25\u2014is the sustained value.",
+    "difficulty": "easy",
+    "reference": "AIM 7-1-28; ACS UA.III.A.K2"
+  },
+  {
+    "id": "wx-025",
+    "topic": "weather",
+    "stem": "Density altitude is best described as:",
+    "choices": [
+      "True altitude above MSL from a GPS",
+      "Pressure altitude corrected for nonstandard temperature",
+      "Indicated altitude with the local altimeter set",
+      "Absolute altitude above the terrain only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Density altitude is pressure altitude corrected for nonstandard temperature (and conceptually for humidity). It is the altitude the aircraft \u201cfeels\u201d for performance. GPS MSL, indicated altitude, and height AGL are different altitude types.",
+    "difficulty": "medium",
+    "reference": "PHAK Chapter 4; ACS UA.III.B.K2"
+  },
+  {
+    "id": "lp-017",
+    "topic": "loading-performance",
+    "stem": "In a coordinated 60\u00b0 bank level turn, load factor is approximately:",
+    "choices": [
+      "1 G",
+      "1.4 G",
+      "2 G",
+      "4 G"
+    ],
+    "correctIndex": 2,
+    "explanation": "Load factor in a level turn is 1/cos(bank). At 60\u00b0 that is 2 G; at 45\u00b0 it is about 1.4 G. Straight-and-level is 1 G. Four G would be an extremely steep bank near 75\u00b0.",
+    "difficulty": "medium",
+    "reference": "PHAK Chapter 5; ACS UA.IV.A.K8"
+  },
+  {
+    "id": "lp-018",
+    "topic": "loading-performance",
+    "stem": "In weight-and-balance calculations, moment is:",
+    "choices": [
+      "Weight divided by arm",
+      "Weight multiplied by arm",
+      "Arm minus datum only",
+      "Maximum takeoff weight minus fuel"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moment = weight \u00d7 arm. CG is total moment divided by total weight. Dividing weight by arm, subtracting datum alone, or subtracting fuel from max weight does not produce moment.",
+    "difficulty": "easy",
+    "reference": "PHAK Chapter 10; ACS UA.V.B.K1"
+  },
+  {
+    "id": "lp-019",
+    "topic": "loading-performance",
+    "stem": "As aircraft weight increases, a small UAS generally experiences:",
+    "choices": [
+      "Longer endurance and excess climb performance",
+      "Higher power required to hover or climb and reduced endurance",
+      "No change in performance if CG is within limits",
+      "Automatically higher manufacturer speed limits"
+    ],
+    "correctIndex": 1,
+    "explanation": "More weight means more lift and thrust are required, so hover/climb margins shrink and batteries deplete faster. CG within limits does not cancel the weight penalty. Manufacturer speed limits are not raised by adding payload.",
+    "difficulty": "easy",
+    "reference": "PHAK Chapter 10; ACS UA.V.A.K1"
+  },
+  {
+    "id": "lp-020",
+    "topic": "loading-performance",
+    "stem": "An out-of-ground-effect (OGE) hover, compared with an in-ground-effect (IGE) hover, typically requires:",
+    "choices": [
+      "Less power because induced drag disappears",
+      "More power because the aircraft is not cushioned by ground effect",
+      "The same power at any density altitude",
+      "No power if the CG is aft"
+    ],
+    "correctIndex": 1,
+    "explanation": "Ground effect reduces induced drag near the surface, so IGE hover takes less power. OGE hover (higher up) needs more power and is the first performance limit you hit on a hot/high day. Aft CG does not eliminate power required.",
+    "difficulty": "hard",
+    "reference": "PHAK Chapter 5; ACS UA.V.A.K2"
+  },
+  {
+    "id": "lp-021",
+    "topic": "loading-performance",
+    "stem": "The aircraft\u2019s center of gravity must remain within:",
+    "choices": [
+      "Any location as long as total weight is under 55 pounds",
+      "The manufacturer\u2019s published CG limits for that loading",
+      "A 10-foot radius of the control station",
+      "The geographic center of the airport"
+    ],
+    "correctIndex": 1,
+    "explanation": "Weight under 55 lb makes the aircraft \u201csmall,\u201d but it must still be loaded within the manufacturer\u2019s CG envelope. Distance from the control station and airport geography are unrelated to CG.",
+    "difficulty": "easy",
+    "reference": "PHAK Chapter 10; 14 CFR \u00a7107.49; ACS UA.V.B.K1"
+  },
+  {
+    "id": "lp-022",
+    "topic": "loading-performance",
+    "stem": "High density altitude reduces propeller and rotor efficiency primarily because:",
+    "choices": [
+      "The air is less dense, so blades produce less thrust for a given RPM",
+      "GPS groundspeed is legally limited to 50 knots",
+      "Magnetic compass errors increase",
+      "Standard temperature is always colder"
+    ],
+    "correctIndex": 0,
+    "explanation": "Thinner air means less mass moved by the props, so thrust and lift drop. Density altitude is not a speed-limit rule, not a compass error, and high DA is associated with hotter-than-standard temperatures, not colder.",
+    "difficulty": "medium",
+    "reference": "PHAK Chapter 4; ACS UA.V.A.K2"
+  },
+  {
+    "id": "lp-023",
+    "topic": "loading-performance",
+    "stem": "A laterally unbalanced payload (heavy on one side) is most likely to cause:",
+    "choices": [
+      "A constant heading with no control input",
+      "A roll or yaw tendency that consumes control margin and battery",
+      "An automatic increase in never-exceed speed",
+      "Improved stability in ground effect only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Lateral CG offset makes the aircraft want to roll or yaw. The flight controller fights it with extra motor power, which shortens endurance and reduces remaining control authority. It does not raise VNE or improve stability.",
+    "difficulty": "medium",
+    "reference": "PHAK Chapter 10; ACS UA.V.B.K2"
+  },
+  {
+    "id": "lp-024",
+    "topic": "loading-performance",
+    "stem": "Useful load on a small UAS is best thought of as:",
+    "choices": [
+      "Empty weight plus maximum takeoff weight",
+      "The weight that can be added (battery, payload, accessories) without exceeding max weight",
+      "Only the camera weight",
+      "The weight of the control station only"
+    ],
+    "correctIndex": 1,
+    "explanation": "Useful load is how much you may add above empty weight up to maximum takeoff weight\u2014batteries, payload, and attachments. Adding empty plus max, counting only the camera, or using the transmitter weight misses the definition.",
+    "difficulty": "easy",
+    "reference": "PHAK Chapter 10; ACS UA.V.B.K1"
+  },
+  {
+    "id": "lp-025",
+    "topic": "loading-performance",
+    "stem": "Performance figures in a manufacturer\u2019s manual are typically based on:",
+    "choices": [
+      "Any temperature and any loading the operator chooses",
+      "Specified conditions such as weight, density altitude, and configuration",
+      "Sea-level standard day only, with no other variables",
+      "IFR flight-plan assumptions"
+    ],
+    "correctIndex": 1,
+    "explanation": "Published performance is valid only for the stated conditions (weight, DA, wind, configuration). You cannot assume those numbers at max payload on a hot mountain day. They are also not limited to a single sea-level chart with no variables, and they are not IFR planning tables.",
+    "difficulty": "medium",
+    "reference": "PHAK Chapter 10; ACS UA.V.A.K3"
+  },
+  {
+    "id": "ops-018",
+    "topic": "operations-emergency",
+    "stem": "Anti-collision lighting required for night small UAS operations must be visible for at least:",
+    "choices": [
+      "1 statute mile",
+      "3 statute miles",
+      "5 statute miles",
+      "10 statute miles"
+    ],
+    "correctIndex": 1,
+    "explanation": "Night (and civil twilight) operations require anti-collision lights visible for at least 3 statute miles. The PIC may reduce intensity if that is in the interest of safety (for example, to protect night vision), but the equipment capability is 3 SM\u2014not 1, 5, or 10.",
+    "difficulty": "easy",
+    "reference": "14 CFR \u00a7107.29; ACS UA.IV.A.K4"
+  },
+  {
+    "id": "ops-019",
+    "topic": "operations-emergency",
+    "stem": "Visual line of sight under Part 107 must be maintained with vision that is unassisted except for:",
+    "choices": [
+      "Binoculars used as the primary way to see the aircraft",
+      "Corrective lenses",
+      "First-person-view goggles without a visual observer",
+      "A telescope on a tripod"
+    ],
+    "correctIndex": 1,
+    "explanation": "Unaided vision means no devices other than corrective lenses (glasses or contacts). Binoculars or a telescope cannot be the primary VLOS method. FPV goggles do not satisfy VLOS unless someone else (PIC or VO) is keeping unaided sight of the UA.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.31; AC 107-2A; ACS UA.IV.A.K2"
+  },
+  {
+    "id": "ops-020",
+    "topic": "operations-emergency",
+    "stem": "If a remote PIC deviates from Part 107 during an in-flight emergency, a written report must be sent:",
+    "choices": [
+      "Automatically within 10 days, like an accident report",
+      "Upon request of the Administrator",
+      "Only if property damage exceeds $500",
+      "Never; emergency deviations need no documentation"
+    ],
+    "correctIndex": 1,
+    "explanation": "\u00a7107.21 allows deviation to the extent necessary to meet the emergency. A written report is required upon request of the Administrator\u2014not automatically in 10 days (that is the accident rule in \u00a7107.9). Dollar damage and \u201cnever\u201d are incorrect.",
+    "difficulty": "hard",
+    "reference": "14 CFR \u00a7107.21; ACS UA.IV.B.K1"
+  },
+  {
+    "id": "ops-021",
+    "topic": "operations-emergency",
+    "stem": "Operations from a moving aircraft under Part 107 are:",
+    "choices": [
+      "Allowed over any city if speed is below 87 knots",
+      "Prohibited",
+      "Allowed if a visual observer is on the ground",
+      "Allowed in Class B only"
+    ],
+    "correctIndex": 1,
+    "explanation": "You may not operate a small UAS from a moving aircraft. Operations from a moving land or water vehicle are a separate rule and are limited (sparsely populated, not over people, etc.). A VO or Class B authorization does not permit flying from another aircraft.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.25; ACS UA.IV.A.K5"
+  },
+  {
+    "id": "ops-022",
+    "topic": "operations-emergency",
+    "stem": "If GPS lock is lost in flight but the control link remains, the safest action is usually to:",
+    "choices": [
+      "Continue the original waypoint mission until the battery dies",
+      "Switch to a stable attitude/manual mode if available, shorten the flight, and land while you still have visual contact",
+      "Climb to 400 feet AGL to recapture satellites",
+      "Turn off the control station to force a reboot"
+    ],
+    "correctIndex": 1,
+    "explanation": "Without GPS, waypoint nav and some RTH logic may fail. Use a stable non-GPS mode, keep VLOS, and land. Climbing may enter clouds or traffic; shutting off the CS can create a lost-link flyaway.",
+    "difficulty": "medium",
+    "reference": "AC 107-2A Chapter 5; ACS UA.IV.B.K2"
+  },
+  {
+    "id": "ops-023",
+    "topic": "operations-emergency",
+    "stem": "A visual observer\u2019s communications with the remote PIC must be:",
+    "choices": [
+      "By text message only, after landing",
+      "Sufficient to know the UA\u2019s location and to coordinate collision avoidance in real time",
+      "Relayed through ATC on 121.5 at all times",
+      "Unnecessary if the aircraft has obstacle sensors"
+    ],
+    "correctIndex": 1,
+    "explanation": "When a VO is used, the PIC and VO must maintain effective communication so the PIC knows the UA location and both can see and avoid other aircraft. After-the-fact texts, a standing 121.5 relay, or onboard sensors do not meet \u00a7107.33.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.33; ACS UA.IV.A.K3"
+  },
+  {
+    "id": "ops-024",
+    "topic": "operations-emergency",
+    "stem": "During civil twilight, a small unmanned aircraft operating under Part 107 must:",
+    "choices": [
+      "Remain in Class G only",
+      "Have anti-collision lighting visible for at least 3 statute miles, unless the PIC reduces intensity for safety",
+      "File a night waiver even if lights are installed",
+      "Be flown only with FPV goggles"
+    ],
+    "correctIndex": 1,
+    "explanation": "Civil twilight operations require the same anti-collision lighting as night. Remaining in Class G is not required, a separate night waiver is not needed when you comply with \u00a7107.29, and FPV is not a twilight requirement.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.29; ACS UA.IV.A.K4"
+  },
+  {
+    "id": "ops-025",
+    "topic": "operations-emergency",
+    "stem": "See-and-avoid responsibility for a small UAS operation rests with:",
+    "choices": [
+      "ATC only, once LAANC is approved",
+      "The remote PIC (and VO, if used) to yield and remain well clear of manned aircraft",
+      "The manufacturer\u2019s obstacle-avoidance cameras alone",
+      "Airport management whenever you are within 5 miles of a runway"
+    ],
+    "correctIndex": 1,
+    "explanation": "The remote PIC must see and avoid other aircraft and yield the right of way. LAANC is airspace authorization, not separation service. Sensors and airport managers do not replace the PIC\u2019s collision-avoidance duty.",
+    "difficulty": "easy",
+    "reference": "14 CFR \u00a7107.37; 14 CFR \u00a7107.31; ACS UA.IV.A.K1"
+  },
+  {
+    "id": "apt-017",
+    "topic": "airport-operations",
+    "stem": "Runway markings are normally what color, while taxiway markings are:",
+    "choices": [
+      "Yellow runways and white taxiways",
+      "White runways and yellow taxiways",
+      "Red runways and blue taxiways",
+      "Orange for both"
+    ],
+    "correctIndex": 1,
+    "explanation": "Runway markings are white; taxiway markings are yellow. Mixing those colors is a common exam trap. Red/blue are lighting or sign colors, not the basic painted marking pair.",
+    "difficulty": "easy",
+    "reference": "AIM 2-3-2; AIM 2-3-4; ACS UA.VI.A.K2"
+  },
+  {
+    "id": "apt-018",
+    "topic": "airport-operations",
+    "stem": "Yellow chevrons painted on a paved surface adjacent to a runway indicate:",
+    "choices": [
+      "The displaced threshold where landing is encouraged",
+      "A blast pad or stopway not available for landing or takeoff",
+      "A taxiway holding position",
+      "A closed runway that may still be used"
+    ],
+    "correctIndex": 1,
+    "explanation": "Chevrons mark a blast pad or stopway\u2014aligned with the runway but not for normal takeoff or landing. Displaced thresholds use arrows, hold lines are perpendicular bars, and a closed runway is marked with X\u2019s.",
+    "difficulty": "medium",
+    "reference": "AIM 2-3-3; ACS UA.VI.A.K2"
+  },
+  {
+    "id": "apt-019",
+    "topic": "airport-operations",
+    "stem": "The standard airplane traffic-pattern legs, in order after takeoff, are typically:",
+    "choices": [
+      "Final, base, downwind, crosswind",
+      "Upwind (departure), crosswind, downwind, base, final",
+      "Downwind, upwind, base only",
+      "Hold short, taxi, ramp, run-up"
+    ],
+    "correctIndex": 1,
+    "explanation": "After takeoff you fly upwind/departure, then crosswind, downwind, base, and final. Reversing that order is the landing sequence backward. Ground taxi legs are not the traffic pattern.",
+    "difficulty": "easy",
+    "reference": "AIM 4-3-3; ACS UA.VI.A.K1"
+  },
+  {
+    "id": "apt-020",
+    "topic": "airport-operations",
+    "stem": "A yellow \u201cX\u201d at each end of a runway indicates the runway is:",
+    "choices": [
+      "The preferred landing runway",
+      "Closed",
+      "Used only at night",
+      "A grass strip with a hard surface nearby"
+    ],
+    "correctIndex": 1,
+    "explanation": "A closed runway or taxiway is marked with a yellow X (often also NOTAMed). It is not a recommendation to land there.",
+    "difficulty": "easy",
+    "reference": "AIM 2-3-6; ACS UA.VI.A.K2"
+  },
+  {
+    "id": "apt-021",
+    "topic": "airport-operations",
+    "stem": "Pilot-controlled lighting at many nontowered airports is typically activated by:",
+    "choices": [
+      "Calling FSS on 122.2 only",
+      "Keying the microphone on the CTAF a specified number of times",
+      "Squawking 7700",
+      "Turning on the aircraft landing lights"
+    ],
+    "correctIndex": 1,
+    "explanation": "PCL is keyed on the published CTAF (commonly 3/5/7 clicks for intensity). FSS 122.2, 7700, and landing lights do not turn on airport lights.",
+    "difficulty": "medium",
+    "reference": "AIM 2-1-10; Chart Supplement; ACS UA.VI.B.K1"
+  },
+  {
+    "id": "apt-022",
+    "topic": "airport-operations",
+    "stem": "A runway incursion is best described as:",
+    "choices": [
+      "Any flight within 5 miles of an airport",
+      "The incorrect presence of an aircraft, vehicle, or person on a protected runway area",
+      "A go-around on final",
+      "Using CTAF at a nontowered field"
+    ],
+    "correctIndex": 1,
+    "explanation": "A runway incursion is an incorrect presence on the protected surface of a runway. Nearby sUAS flight, a go-around, or making radio calls are not the definition\u2014though a drone on a runway would be an incursion hazard.",
+    "difficulty": "medium",
+    "reference": "AIM Pilot/Controller Glossary; ACS UA.VI.A.K3"
+  },
+  {
+    "id": "apt-023",
+    "topic": "airport-operations",
+    "stem": "On a Precision Approach Path Indicator (PAPI), two white and two red lights typically mean the aircraft is:",
+    "choices": [
+      "Well below the glide path",
+      "On the approximate glide path",
+      "Well above the glide path",
+      "Lined up with a taxiway, not a runway"
+    ],
+    "correctIndex": 1,
+    "explanation": "Memory aid: red over white, you\u2019re all right\u2014two white and two red is on path. Four red is too low; four white is too high. PAPI does not identify a taxiway.",
+    "difficulty": "medium",
+    "reference": "AIM 2-1-2; ACS UA.VI.A.K2"
+  },
+  {
+    "id": "apt-024",
+    "topic": "airport-operations",
+    "stem": "A civilian-airport rotating beacon showing alternating white and green typically indicates:",
+    "choices": [
+      "A military airport",
+      "A lighted civilian land airport",
+      "A heliport only",
+      "A seaplane base only"
+    ],
+    "correctIndex": 1,
+    "explanation": "White-green is the civilian land-airport beacon. Military uses dual-peaked white and green; heliports use green-yellow-white; seaplane bases use white-yellow.",
+    "difficulty": "medium",
+    "reference": "AIM 2-1-10; ACS UA.VI.A.K2"
+  },
+  {
+    "id": "apt-025",
+    "topic": "airport-operations",
+    "stem": "Right-hand traffic at a nontowered airport is indicated when:",
+    "choices": [
+      "All U.S. patterns are right-hand by default",
+      "The segmented circle, Chart Supplement, or visual indicators specify right traffic for that runway",
+      "The windsock is orange",
+      "The airport has a rotating beacon"
+    ],
+    "correctIndex": 1,
+    "explanation": "Standard pattern is left unless right traffic is published or shown by the segmented circle/traffic-pattern indicators. Windsock color and the beacon do not set pattern direction.",
+    "difficulty": "medium",
+    "reference": "AIM 4-3-3; 14 CFR \u00a791.126; ACS UA.VI.A.K1"
+  },
+  {
+    "id": "rad-017",
+    "topic": "radio",
+    "stem": "The ICAO phonetic word for the letter \u201cX\u201d is:",
+    "choices": [
+      "X-ray",
+      "Extra",
+      "Xylophone",
+      "Xavier"
+    ],
+    "correctIndex": 0,
+    "explanation": "X is X-ray. Extra, xylophone, and Xavier are not ICAO phonetics. Using nonstandard words causes confusion on a shared frequency.",
+    "difficulty": "easy",
+    "reference": "AIM 4-2-7; ACS UA.VII.A.K2"
+  },
+  {
+    "id": "rad-018",
+    "topic": "radio",
+    "stem": "The ICAO phonetic word for the letter \u201cZ\u201d is:",
+    "choices": [
+      "Zebra",
+      "Zulu",
+      "Zed",
+      "Zipper"
+    ],
+    "correctIndex": 1,
+    "explanation": "Z is Zulu. Zebra and zipper are informal; zed is how some speakers name the letter, not the radiotelephony word.",
+    "difficulty": "easy",
+    "reference": "AIM 4-2-7; ACS UA.VII.A.K2"
+  },
+  {
+    "id": "rad-019",
+    "topic": "radio",
+    "stem": "A flashing red light-gun signal to an aircraft in flight means:",
+    "choices": [
+      "Cleared to land",
+      "Airport unsafe \u2014 do not land",
+      "Return to the airport starting point",
+      "Cleared to taxi"
+    ],
+    "correctIndex": 1,
+    "explanation": "Flashing red in the air: airport unsafe, do not land. Steady green in the air is cleared to land. Flashing white is return to starting point on the airport (ground). Cleared to taxi is flashing green on the ground.",
+    "difficulty": "medium",
+    "reference": "AIM 4-3-13; ACS UA.VII.B.K1"
+  },
+  {
+    "id": "rad-020",
+    "topic": "radio",
+    "stem": "A flashing white light-gun signal to an aircraft on the ground means:",
+    "choices": [
+      "Cleared for takeoff",
+      "Stop",
+      "Return to starting point on the airport",
+      "Exercise extreme caution"
+    ],
+    "correctIndex": 2,
+    "explanation": "Flashing white: return to starting point on the airport. Steady green on the ground is cleared for takeoff; steady red is stop; alternating red/green is exercise extreme caution.",
+    "difficulty": "medium",
+    "reference": "AIM 4-3-13; ACS UA.VII.B.K1"
+  },
+  {
+    "id": "rad-021",
+    "topic": "radio",
+    "stem": "On a VFR sectional airport data block, the CTAF is identified by:",
+    "choices": [
+      "A star next to the field elevation",
+      "A \u201cC\u201d inside a circle next to the frequency",
+      "The letters \u201cIFR\u201d in blue",
+      "A magenta flag over the tower frequency only"
+    ],
+    "correctIndex": 1,
+    "explanation": "CTAF is the frequency with a circled C. Field-elevation stars relate to lighting, not CTAF. IFR labels and flags are unrelated to the CTAF symbol.",
+    "difficulty": "medium",
+    "reference": "Aeronautical Chart User\u2019s Guide; ACS UA.VII.A.K1"
+  },
+  {
+    "id": "rad-022",
+    "topic": "radio",
+    "stem": "The ICAO phonetic word for the letter \u201cQ\u201d is:",
+    "choices": [
+      "Queen",
+      "Quebec",
+      "Quack",
+      "Quick"
+    ],
+    "correctIndex": 1,
+    "explanation": "Q is Quebec (often pronounced KEH-beck). Queen, quack, and quick are not standard.",
+    "difficulty": "easy",
+    "reference": "AIM 4-2-7; ACS UA.VII.A.K2"
+  },
+  {
+    "id": "rad-023",
+    "topic": "radio",
+    "stem": "UNICOM and CTAF at a nontowered airport:",
+    "choices": [
+      "Are always different frequencies and must both be used",
+      "May be the same frequency; CTAF is for traffic advisories and UNICOM may also provide airport advisory/services",
+      "Are only used at Class B airports",
+      "Replace the need to look for other aircraft"
+    ],
+    "correctIndex": 1,
+    "explanation": "Many nontowered fields combine CTAF and UNICOM on one frequency (often 122.8). CTAF is the traffic frequency; UNICOM is a nongovernment advisory/service. They are not Class B tools, and radio never replaces see-and-avoid.",
+    "difficulty": "medium",
+    "reference": "AIM 4-1-9; AIM 4-1-11; ACS UA.VII.A.K1"
+  },
+  {
+    "id": "rad-024",
+    "topic": "radio",
+    "stem": "When stating 10,000 feet on the radio, a common recommended phrasing is:",
+    "choices": [
+      "Ten thousand",
+      "One zero thousand",
+      "Ten k",
+      "Flight level one zero zero"
+    ],
+    "correctIndex": 1,
+    "explanation": "AIM examples separate digits for thousands (\u201cONE ZERO THOUSAND\u201d) to avoid confusion with 11,000. \u201cTen k\u201d is slang. Flight levels start at 18,000 (Class A) and would be spoken as flight level, not 10,000 MSL.",
+    "difficulty": "medium",
+    "reference": "AIM 4-2-9; ACS UA.VII.A.K3"
+  },
+  {
+    "id": "rad-025",
+    "topic": "radio",
+    "stem": "An alternating red and green light-gun signal means:",
+    "choices": [
+      "Cleared to land",
+      "Exercise extreme caution",
+      "Airport closed permanently",
+      "Contact clearance delivery"
+    ],
+    "correctIndex": 1,
+    "explanation": "Alternating red and green means exercise extreme caution (in the air or on the ground). Cleared to land is steady green in flight. It does not mean a permanent closure or a frequency change to clearance delivery.",
+    "difficulty": "medium",
+    "reference": "AIM 4-3-13; ACS UA.VII.B.K1"
+  },
+  {
+    "id": "mnt-018",
+    "topic": "maintenance-preflight",
+    "stem": "Lithium flight batteries should generally be stored:",
+    "choices": [
+      "Fully charged at 100% for months on a hot dashboard",
+      "At a manufacturer-recommended storage charge, in a cool, dry place, away from flammables",
+      "Inside the aircraft with the power switch on",
+      "Discharged to 0% so they cannot catch fire"
+    ],
+    "correctIndex": 1,
+    "explanation": "Storage charge (often around 50\u201360% / ~3.8 V per LiPo cell) in a cool, fire-safe location is the usual manufacturer guidance. Full charge in heat, leaving packs powered in the airframe, or flattening to 0% damages cells and can increase hazard.",
+    "difficulty": "medium",
+    "reference": "Manufacturer instructions; AC 107-2A; ACS UA.VIII.A.K2"
+  },
+  {
+    "id": "mnt-019",
+    "topic": "maintenance-preflight",
+    "stem": "If the manufacturer issues a service bulletin affecting flight controls, the remote PIC should:",
+    "choices": [
+      "Ignore it unless an FAA Airworthiness Directive was mailed",
+      "Follow the manufacturer\u2019s instructions before further flight if they affect safe operation",
+      "Apply it only after the next annual inspection date",
+      "Wait until a discrepancy actually causes a crash"
+    ],
+    "correctIndex": 1,
+    "explanation": "Part 107 does not use manned-aircraft annuals, but the PIC must ensure the sUAS is in a condition for safe operation and follow manufacturer maintenance instructions. Waiting for a crash or for a mailed AD is not acceptable.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.15; AC 107-2A; ACS UA.VIII.A.K1"
+  },
+  {
+    "id": "mnt-020",
+    "topic": "maintenance-preflight",
+    "stem": "A payload (camera or sensor) that is not fully latched before takeoff:",
+    "choices": [
+      "Is acceptable if the flight is under 5 minutes",
+      "Is a preflight discrepancy; do not fly until it is secured",
+      "Is the visual observer\u2019s responsibility only",
+      "Automatically jettisons under Part 107 object-dropping rules"
+    ],
+    "correctIndex": 1,
+    "explanation": "An unsecured payload can shift CG, fall, or strike a propeller. That is not a condition for safe operation. Flight time, VO duty, and the dropping-objects rule do not make a loose camera legal or safe.",
+    "difficulty": "easy",
+    "reference": "14 CFR \u00a7107.15; 14 CFR \u00a7107.49; ACS UA.VIII.B.K1"
+  },
+  {
+    "id": "mnt-021",
+    "topic": "maintenance-preflight",
+    "stem": "Compass or magnetometer calibration should be done:",
+    "choices": [
+      "On the steel bed of a pickup surrounded by speakers",
+      "In an area relatively free of magnetic interference, per the manufacturer",
+      "Only at night",
+      "While the rotors are at full takeoff power"
+    ],
+    "correctIndex": 1,
+    "explanation": "Magnetometers are easily biased by steel, magnets, and vehicles. Calibrate on a clean site as the manufacturer describes. Night and spool-up are irrelevant and can make the calibration worse.",
+    "difficulty": "easy",
+    "reference": "Manufacturer instructions; AC 107-2A; ACS UA.VIII.B.K2"
+  },
+  {
+    "id": "mnt-022",
+    "topic": "maintenance-preflight",
+    "stem": "After a repair to a flight-critical part (arm, motor, or flight controller), an appropriate return-to-service step is:",
+    "choices": [
+      "Immediate max-range customer flight",
+      "A controlled functional check (for example a tethered or short hover) in a safe area",
+      "Skipping preflight because the part is new",
+      "Updating only the camera firmware"
+    ],
+    "correctIndex": 1,
+    "explanation": "Verify the repair before a demanding mission. A new part does not skip preflight, and camera firmware will not validate a motor or arm repair.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.15; AC 107-2A; ACS UA.VIII.A.K1"
+  },
+  {
+    "id": "mnt-023",
+    "topic": "maintenance-preflight",
+    "stem": "Charging a lithium battery unattended on a flammable surface is a hazard because:",
+    "choices": [
+      "Chargers cannot overheat by design",
+      "Thermal runaway can start a fire with little warning",
+      "Part 107 requires all charging to occur in flight",
+      "Batteries only fail when cold"
+    ],
+    "correctIndex": 1,
+    "explanation": "Li-ion/LiPo packs can enter thermal runaway while charging. Use the correct charger, a fire-resistant location, and supervision. Charging in flight is not a rule, and failures are more common with heat and abuse than with cold storage.",
+    "difficulty": "easy",
+    "reference": "Manufacturer instructions; ACS UA.VIII.A.K2"
+  },
+  {
+    "id": "mnt-024",
+    "topic": "maintenance-preflight",
+    "stem": "Control-link antennas on the aircraft or transmitter that are cracked or poorly seated should be:",
+    "choices": [
+      "Ignored if video still looks sharp",
+      "Corrected or the aircraft grounded; range and failsafe behavior may be degraded",
+      "Covered with tape as a permanent repair",
+      "Bent further to improve gain"
+    ],
+    "correctIndex": 1,
+    "explanation": "Damaged antennas reduce link margin and can cause lost-link events even if the FPV picture looks fine. Tape and further bending are not proper repairs.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.15; AC 107-2A; ACS UA.VIII.B.K1"
+  },
+  {
+    "id": "mnt-025",
+    "topic": "maintenance-preflight",
+    "stem": "Water-soaked electronics after a ditching or rain event should result in:",
+    "choices": [
+      "Immediate high-voltage charging to dry the pack",
+      "Removing power, following manufacturer recovery guidance, and not flying until the system is verified safe",
+      "A flight to use remaining battery so it does not go to waste",
+      "Only wiping the camera lens"
+    ],
+    "correctIndex": 1,
+    "explanation": "Moisture causes shorts and corrosion. Power down, dry/inspect per the manufacturer, and do not fly a wet flight controller or battery. Forcing a charge or a \u201cuse it up\u201d flight can cause fire or flyaway.",
+    "difficulty": "medium",
+    "reference": "Manufacturer instructions; 14 CFR \u00a7107.15; ACS UA.VIII.A.K1"
+  },
+  {
+    "id": "hf-018",
+    "topic": "human-factors-adm",
+    "stem": "The five hazardous attitudes in FAA ADM training are:",
+    "choices": [
+      "Fear, anger, joy, sadness, and surprise",
+      "Anti-authority, impulsivity, invulnerability, macho, and resignation",
+      "Haste, waste, laziness, greed, and pride",
+      "IFR, VFR, MVFR, LIFR, and SVFR"
+    ],
+    "correctIndex": 1,
+    "explanation": "FAA ADM names anti-authority, impulsivity, invulnerability, macho, and resignation\u2014each with a learned antidote. Basic emotions, slogans, and weather categories are not the hazardous-attitude set.",
+    "difficulty": "easy",
+    "reference": "PHAK Chapter 2; ACS UA.IX.A.K1"
+  },
+  {
+    "id": "hf-019",
+    "topic": "human-factors-adm",
+    "stem": "\u201cGet-there-itis\u201d (or get-home-itis) is hazardous because it:",
+    "choices": [
+      "Improves conservative decision making",
+      "Pressures the remote PIC to continue a flight despite weather, fatigue, or equipment doubts",
+      "Is required by Part 107 when a client is waiting",
+      "Only affects manned airline captains"
+    ],
+    "correctIndex": 1,
+    "explanation": "External pressure to complete the job leads people to skip limits. It is an ADM trap for remote pilots as well as manned pilots. Part 107 does not require completing an unsafe flight for a client.",
+    "difficulty": "easy",
+    "reference": "PHAK Chapter 2; ACS UA.IX.A.K2"
+  },
+  {
+    "id": "hf-020",
+    "topic": "human-factors-adm",
+    "stem": "Autokinesis is a night visual illusion in which:",
+    "choices": [
+      "A stationary light appears to move if you stare at it",
+      "The horizon always looks lower than it is",
+      "Clouds appear closer in daylight",
+      "Runway lights form a true glide path"
+    ],
+    "correctIndex": 0,
+    "explanation": "Staring at a single point of light in the dark can make it appear to drift. That can be mistaken for another aircraft in motion. It is not a daylight cloud illusion and does not create a reliable glide-path cue.",
+    "difficulty": "medium",
+    "reference": "PHAK Chapter 17; ACS UA.IX.B.K2"
+  },
+  {
+    "id": "hf-021",
+    "topic": "human-factors-adm",
+    "stem": "The CARE risk-management checklist stands for:",
+    "choices": [
+      "Climb, Airspeed, Radio, Emergency",
+      "Consequences, Alternatives, Reality, External pressures",
+      "Certificate, Airspace, Recency, Equipment",
+      "Crew, Airport, Runway, Engine"
+    ],
+    "correctIndex": 1,
+    "explanation": "CARE is Consequences, Alternatives, Reality, External pressures\u2014used with the 3P model to process a perceived hazard. The other expansions are invented.",
+    "difficulty": "hard",
+    "reference": "PHAK Chapter 2; ACS UA.IX.A.K3"
+  },
+  {
+    "id": "hf-022",
+    "topic": "human-factors-adm",
+    "stem": "Residual effects of alcohol (a hangover) can:",
+    "choices": [
+      "Be ignored once 8 hours have passed, regardless of how you feel",
+      "Still impair judgment, coordination, and scanning even after the 8-hour rule",
+      "Improve night vision",
+      "Satisfy the IMSAFE \u201cA\u201d item automatically"
+    ],
+    "correctIndex": 1,
+    "explanation": "The 8-hour rule is a minimum, not a fitness guarantee. Hangover symptoms and residual BAC can still make you unsafe. IMSAFE \u201cAlcohol\u201d includes after-effects, and alcohol does not help night vision.",
+    "difficulty": "medium",
+    "reference": "14 CFR \u00a7107.27; PHAK Chapter 17; ACS UA.IX.B.K1"
+  },
+  {
+    "id": "hf-023",
+    "topic": "human-factors-adm",
+    "stem": "Single-pilot resource management for a remote PIC includes:",
+    "choices": [
+      "Ignoring the visual observer to reduce workload",
+      "Using all available resources\u2014VO, checklists, apps, weather, and personal minimums",
+      "Memorizing every METAR without writing anything down",
+      "Letting the client make the go/no-go call"
+    ],
+    "correctIndex": 1,
+    "explanation": "SRM/CRM means using people, information, and tools. Dismissing a VO or handing the safety decision to a client is the opposite. You do not have to memorize METARs unaided.",
+    "difficulty": "easy",
+    "reference": "PHAK Chapter 2; ACS UA.IX.C.K1"
+  },
+  {
+    "id": "hf-024",
+    "topic": "human-factors-adm",
+    "stem": "Stress that remains unmanaged is most likely to:",
+    "choices": [
+      "Narrow attention, degrade scanning, and invite hazardous attitudes",
+      "Increase useful field of view",
+      "Eliminate the need for a preflight",
+      "Automatically improve working memory"
+    ],
+    "correctIndex": 0,
+    "explanation": "Excess stress tunnels attention and invites impulsivity or resignation. It does not widen vision, replace preflight, or help memory.",
+    "difficulty": "easy",
+    "reference": "PHAK Chapter 2; ACS UA.IX.B.K1"
+  },
+  {
+    "id": "hf-025",
+    "topic": "human-factors-adm",
+    "stem": "The TEAM risk options in ADM are:",
+    "choices": [
+      "Takeoff, Enroute, Approach, Missed",
+      "Transfer, Eliminate, Accept, Mitigate",
+      "Train, Evaluate, Assign, Measure",
+      "Throttle, Elevator, Aileron, Mixture"
+    ],
+    "correctIndex": 1,
+    "explanation": "After you process a risk, TEAM asks whether to Transfer it, Eliminate it, Accept it, or Mitigate it. The other lists are flight phases, management jargon, or airplane controls.",
+    "difficulty": "hard",
+    "reference": "PHAK Chapter 2; ACS UA.IX.A.K3"
   }
 ]

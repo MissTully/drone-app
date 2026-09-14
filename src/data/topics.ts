@@ -71,7 +71,7 @@ export const TOPIC_LABELS: Record<TopicId, string> = {
 export const DISCLAIMER =
   'This is a study aid. Questions are not official FAA test items.'
 
-export const PRACTICE_SESSION_SIZE = 10
+export const PRACTICE_SESSION_SIZE = 25
 export const TEST_QUESTION_COUNT = 60
 export const TEST_DURATION_MS = 2 * 60 * 60 * 1000
 export const PASS_THRESHOLD = 0.7

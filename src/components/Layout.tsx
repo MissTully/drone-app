@@ -30,6 +30,14 @@ export function Layout({ children }: { children: ReactNode }) {
             Practice
           </NavLink>
           <NavLink
+            to="/modules"
+            className={({ isActive }) =>
+              isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink
+            }
+          >
+            Modules
+          </NavLink>
+          <NavLink
             to="/test"
             className={({ isActive }) =>
               isActive ? `${styles.navLink} ${styles.navLinkActive}` : styles.navLink

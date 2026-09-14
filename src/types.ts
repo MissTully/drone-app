@@ -25,6 +25,32 @@ export type Question = {
   difficulty: Difficulty
 }
 
+export type ModuleVocab = {
+  term: string
+  definition: string
+}
+
+export type ModuleQuizItem = {
+  id: string
+  stem: string
+  choices: [string, string, string, string]
+  correctIndex: 0 | 1 | 2 | 3
+  explanation: string
+  reference: string
+}
+
+export type StudyModule = {
+  topicId: TopicId
+  title: string
+  youtubeVideoId: string
+  youtubeTitle: string
+  youtubeChannel: string
+  keyPoints: string[]
+  vocabulary: ModuleVocab[]
+  explanation: string[]
+  quiz: [ModuleQuizItem, ModuleQuizItem, ModuleQuizItem]
+}
+
 export type TopicStat = {
   attempted: number
   correct: number
