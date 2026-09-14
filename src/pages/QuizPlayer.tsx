@@ -39,28 +39,13 @@ export function QuizPlayer() {
   const sessionTopic = session?.topicId
 
   useEffect(() => {
-    if (isTest) {
-      if (sessionMode !== 'test' || sessionStatus !== 'active') {
-        startTest({ resume: true })
-      }
-      return
-    }
-    if (isRetry) return
+    if (isTest || isRetry) return
     if (isTopicId(topicId)) {
       if (sessionMode !== 'practice' || sessionTopic !== topicId) {
         startPractice(topicId, { resume: true })
       }
     }
-  }, [
-    isRetry,
-    isTest,
-    sessionMode,
-    sessionStatus,
-    sessionTopic,
-    startPractice,
-    startTest,
-    topicId,
-  ])
+  }, [isRetry, isTest, sessionMode, sessionTopic, startPractice, topicId])
 
   const questions = useMemo(() => {
     if (!session) return []
@@ -77,6 +62,31 @@ export function QuizPlayer() {
         title="Unknown topic"
         body="Choose one of the nine ACS-aligned topics from the practice list."
       />
+    )
+  }
+
+  if (isTest && (sessionMode !== 'test' || sessionStatus !== 'active')) {
+    return (
+      <div>
+        <h1 className={styles.stem} style={{ marginTop: 0 }}>
+          Practice test
+        </h1>
+        <p className={styles.meta}>
+          60 mixed questions, 2-hour countdown, no hints until results. Pass at 70% or better.
+          Unanswered items count as incorrect. The timer submits automatically at 0:00.
+        </p>
+        <div style={{ margin: '1rem 0' }}>
+          <Disclaimer />
+        </div>
+        <div className={styles.actions}>
+          <button type="button" className={btn.primary} onClick={() => startTest()}>
+            Begin 60-question test
+          </button>
+          <Link className={btn.ghost} to="/">
+            Home
+          </Link>
+        </div>
+      </div>
     )
   }
 
