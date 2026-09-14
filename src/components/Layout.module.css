@@ -98,10 +98,55 @@
 }
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
   border-top: 1px solid var(--line);
-  padding: 1rem 1.25rem 1.5rem;
+  padding: 0.9rem 1.25rem 1.15rem;
   color: var(--muted);
   font-size: 0.82rem;
-  text-align: center;
   line-height: 1.45;
+}
+
+.disclaimer {
+  margin: 0;
+  max-width: 42rem;
+}
+
+.credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: none;
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.credit:hover {
+  color: var(--text);
+}
+
+.creditLogo {
+  height: 32px;
+  width: auto;
+  display: block;
+  background: #eef3f8;
+  border-radius: 8px;
+  padding: 0.15rem 0.35rem;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .credit {
+    align-self: flex-end;
+    margin-left: 0;
+  }
 }
