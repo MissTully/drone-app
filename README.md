@@ -1,6 +1,6 @@
-# drone-app
+# Remote Possibilities
 
-Study app for FAA Part 107 commercial drone certification. Quiz, practice tests, and topic study modules.
+Study app for FAA Part 107 commercial drone certification — quiz, practice tests, and topic study modules. The GitHub repository remains `drone-app`.
 
 **Disclaimer:** This is a study aid. Questions are not official FAA test items. Embedded YouTube videos are third-party content, not official FAA training.
 

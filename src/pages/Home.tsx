@@ -26,10 +26,11 @@ export function Home() {
     <div>
       <section className={styles.hero}>
         <p className={styles.kicker}>FAA Part 107 · Commercial sUAS</p>
-        <h1 className={styles.title}>Study with topic drills and full-length practice tests.</h1>
+        <h1 className={styles.title}>Remote Possibilities</h1>
         <p className={styles.lede}>
-          Learn with topic modules, drill the 225-question bank, then sit a 60-question timed exam
-          with a 70% pass line. Progress stays on this device.
+          Study with topic drills and full-length practice tests. Learn with topic modules, drill
+          the 225-question bank, then sit a 60-question timed exam with a 70% pass line. Progress
+          stays on this device.
         </p>
         <Disclaimer />
       </section>
