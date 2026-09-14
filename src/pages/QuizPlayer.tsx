@@ -212,6 +212,9 @@ export function QuizPlayer() {
             {savedAnswer === question.correctIndex ? 'Correct' : 'Incorrect'}
           </p>
           <p>{question.explanation}</p>
+          <p className={styles.reference}>
+            <span>Reference.</span> {question.reference}
+          </p>
         </div>
       ) : null}
 

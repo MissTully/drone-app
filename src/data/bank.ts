@@ -16,6 +16,8 @@ function isQuestion(value: unknown): value is Question {
     q.correctIndex >= 0 &&
     q.correctIndex <= 3 &&
     typeof q.explanation === 'string' &&
+    typeof q.reference === 'string' &&
+    q.reference.trim().length > 0 &&
     (q.difficulty === 'easy' || q.difficulty === 'medium' || q.difficulty === 'hard')
   )
 }

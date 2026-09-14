@@ -31,6 +31,7 @@ Seed data lives in `src/data/questions.json`.
 
 - 9 topics, **150 unique questions** (~16–17 per topic)
 - Practice tests draw **60 unique** items sampled in proportion to the bank
+- Each item includes a teaching **rationale** and a **Reference** cite (CFR, AIM, ACS, AC, or handbook)
 - Items are original study-style questions aligned to ACS topic IDs. They are **not** copied from the FAA knowledge test.
 
 Topic IDs: `regulations`, `airspace`, `weather`, `loading-performance`, `operations-emergency`, `airport-operations`, `radio`, `maintenance-preflight`, `human-factors-adm`
