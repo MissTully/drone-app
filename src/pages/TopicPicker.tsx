@@ -15,8 +15,8 @@ export function TopicPicker() {
     <div>
       <h1 className={styles.title}>Practice by topic</h1>
       <p className={styles.lede}>
-        Questions are shuffled. Sessions use up to 10 items from the selected topic, with feedback
-        after each answer.
+        Questions are shuffled. Each session uses all 25 items from the selected topic, with
+        feedback after each answer.
       </p>
       <div style={{ margin: '1rem 0' }}>
         <Disclaimer compact />

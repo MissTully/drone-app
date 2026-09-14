@@ -86,6 +86,9 @@ export function Results() {
                   <p className={styles.you}>Your answer: {selected}</p>
                   <p className={styles.correct}>Correct: {correct}</p>
                   <p className={styles.explain}>{question.explanation}</p>
+                  <p className={styles.reference}>
+                    <span>Reference.</span> {question.reference}
+                  </p>
                 </article>
               )
             })}

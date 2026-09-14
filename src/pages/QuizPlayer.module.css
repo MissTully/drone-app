@@ -84,6 +84,21 @@
   margin-bottom: 0.35rem;
 }
 
+.reference {
+  margin-top: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.reference span {
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin-right: 0.4rem;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;

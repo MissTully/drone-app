@@ -16,6 +16,8 @@ function isQuestion(value: unknown): value is Question {
     q.correctIndex >= 0 &&
     q.correctIndex <= 3 &&
     typeof q.explanation === 'string' &&
+    typeof q.reference === 'string' &&
+    q.reference.trim().length > 0 &&
     (q.difficulty === 'easy' || q.difficulty === 'medium' || q.difficulty === 'hard')
   )
 }
@@ -31,6 +33,10 @@ function loadBank(): Question[] {
     return item
   })
 
+  if (questions.length !== 225) {
+    throw new Error(`Question bank has ${questions.length} items; need 225`)
+  }
+
   const ids = new Set<string>()
   for (const question of questions) {
     if (ids.has(question.id)) {
@@ -41,8 +47,8 @@ function loadBank(): Question[] {
 
   for (const topicId of TOPIC_IDS) {
     const count = questions.filter((question) => question.topic === topicId).length
-    if (count < 5) {
-      throw new Error(`Topic ${topicId} has ${count} questions; need at least 5`)
+    if (count !== 25) {
+      throw new Error(`Topic ${topicId} has ${count} questions; need exactly 25`)
     }
   }
 
