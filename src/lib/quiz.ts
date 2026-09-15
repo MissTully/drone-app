@@ -5,6 +5,7 @@ import {
   TEST_QUESTION_COUNT,
   TOPIC_IDS,
 } from '../data/topics'
+import { ENFORCE_FREE_LIMITS, FREE_PRACTICE_QUESTIONS_PER_TOPIC } from './entitlements'
 
 export function shuffle<T>(items: T[]): T[] {
   const copy = [...items]
@@ -32,7 +33,8 @@ export function questionsByTopic(bank: Question[]): Record<TopicId, Question[]> 
 
 export function pickPracticeQuestions(bank: Question[], topicId: TopicId): Question[] {
   const pool = bank.filter((question) => question.topic === topicId)
-  return shuffle(pool).slice(0, PRACTICE_SESSION_SIZE)
+  const size = ENFORCE_FREE_LIMITS ? FREE_PRACTICE_QUESTIONS_PER_TOPIC : PRACTICE_SESSION_SIZE
+  return shuffle(pool).slice(0, size)
 }
 
 export function pickTestQuestions(

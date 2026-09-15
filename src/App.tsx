@@ -2,6 +2,7 @@ import { Link, Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { Home } from './pages/Home'
 import { Modules } from './pages/Modules'
+import { Pricing } from './pages/Pricing'
 import { QuizPlayer } from './pages/QuizPlayer'
 import { Results } from './pages/Results'
 import { TopicPicker } from './pages/TopicPicker'
@@ -26,6 +27,7 @@ export default function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/pricing" element={<Pricing />} />
         <Route path="/practice" element={<TopicPicker />} />
         <Route path="/practice/:topicId" element={<QuizPlayer />} />
         <Route path="/modules" element={<Modules />} />

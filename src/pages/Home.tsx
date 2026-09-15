@@ -65,15 +65,15 @@ export function Home() {
           <Link className={btn.primary} to="/modules">
             Start studying free
           </Link>
-          <Link className={btn.secondary} to="/test">
-            Take a practice test
+          <Link className={btn.secondary} to="/pricing">
+            Get Exam Ready · $29
           </Link>
         </div>
         <p className={styles.micro}>No account. Progress stays on your device.</p>
       </section>
 
       <p className={styles.trust}>
-        Built for the Remote Pilot (small UAS) knowledge test · ACS-aligned topics · Free to use
+        Built for the Remote Pilot (small UAS) knowledge test · ACS-aligned topics · Start free
       </p>
 
       <section className={styles.split}>
@@ -148,9 +148,14 @@ export function Home() {
           Your remote pilot certificate starts with knowing the material. Remote Possibilities is
           here for the reps.
         </p>
-        <Link className={btn.primary} to="/modules">
-          Start studying free
-        </Link>
+        <div className={styles.ctaRow}>
+          <Link className={btn.primary} to="/modules">
+            Start studying free
+          </Link>
+          <Link className={btn.secondary} to="/pricing">
+            Get Exam Ready · $29
+          </Link>
+        </div>
       </section>
     </div>
   )

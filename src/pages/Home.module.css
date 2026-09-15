@@ -206,6 +206,10 @@
   box-shadow: var(--shadow);
 }
 
+.finalCta .ctaRow {
+  margin-top: 0;
+}
+
 @media (max-width: 720px) {
   .split,
   .features,

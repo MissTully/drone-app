@@ -1,0 +1,29 @@
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(240, 180, 41, 0.28);
+  border-radius: 12px;
+  background: rgba(240, 180, 41, 0.08);
+}
+
+.copy {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.92rem;
+  max-width: 42rem;
+}
+
+.link {
+  flex: none;
+  color: var(--gold);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.link:hover {
+  color: #ffc44d;
+}

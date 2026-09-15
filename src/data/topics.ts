@@ -78,3 +78,4 @@ export const PASS_THRESHOLD = 0.7
 export const PROGRESS_STORAGE_KEY = 'drone-app-progress'
 export const SESSION_STORAGE_KEY = 'drone-app-session'
 export const RESULT_STORAGE_KEY = 'drone-app-last-result'
+export const WAITLIST_STORAGE_KEY = 'drone-app-exam-ready-waitlist'

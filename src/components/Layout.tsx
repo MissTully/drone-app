@@ -45,6 +45,18 @@ export function Layout({ children }: { children: ReactNode }) {
           >
             Practice Test
           </NavLink>
+          <NavLink
+            to="/pricing"
+            className={({ isActive }) =>
+              [
+                styles.navLink,
+                styles.navLinkExam,
+                isActive ? styles.navLinkActive : '',
+              ].join(' ')
+            }
+          >
+            Exam Ready
+          </NavLink>
         </nav>
       </header>
       <main className={styles.main}>{children}</main>
