@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Disclaimer } from '../components/Disclaimer'
+import { ExamReadyBanner } from '../components/ExamReadyBanner'
 import { useQuiz } from '../context/QuizContext'
 import { getQuestionsByIds } from '../data/bank'
 import { PASS_THRESHOLD, TOPIC_LABELS } from '../data/topics'
@@ -46,7 +47,13 @@ export function Results() {
           </span>
         ) : null}
       </div>
-      <Disclaimer />
+      <div style={{ display: 'grid', gap: '0.75rem', margin: '0 0 1rem' }}>
+        <Disclaimer />
+        <ExamReadyBanner>
+          Exam Ready includes unlimited retry of missed questions, the full question bank, and
+          unlimited timed tests.
+        </ExamReadyBanner>
+      </div>
 
       <section className={styles.section}>
         <h2>Breakdown by topic</h2>

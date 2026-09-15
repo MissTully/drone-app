@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { Link, useLocation, useParams } from 'react-router-dom'
 import { Disclaimer } from '../components/Disclaimer'
+import { ExamReadyBanner } from '../components/ExamReadyBanner'
 import { ProgressBar } from '../components/ProgressBar'
 import { Timer } from '../components/Timer'
 import { useQuiz } from '../context/QuizContext'
@@ -75,8 +76,11 @@ export function QuizPlayer() {
           60 mixed questions, 2-hour countdown, no hints until results. Pass at 70% or better.
           Unanswered items count as incorrect. The timer submits automatically at 0:00.
         </p>
-        <div style={{ margin: '1rem 0' }}>
+        <div style={{ margin: '1rem 0', display: 'grid', gap: '0.75rem' }}>
           <Disclaimer />
+          <ExamReadyBanner>
+            Exam Ready includes unlimited timed practice tests for test-week reps.
+          </ExamReadyBanner>
         </div>
         <div className={styles.actions}>
           <button type="button" className={btn.primary} onClick={() => startTest()}>

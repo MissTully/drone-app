@@ -1,5 +1,5 @@
 import type { Progress, TopicId } from '../types'
-import { PROGRESS_STORAGE_KEY } from '../data/topics'
+import { PROGRESS_STORAGE_KEY, WAITLIST_STORAGE_KEY } from '../data/topics'
 
 const emptyProgress = (): Progress => ({
   version: 1,
@@ -106,4 +106,38 @@ function applyTopicStats(
       correct: existing.correct + row.correct,
     }
   }
+}
+
+export type WaitlistSignup = {
+  email: string
+  savedAt: number
+}
+
+function parseWaitlist(value: unknown): WaitlistSignup | null {
+  if (!isRecord(value) || typeof value.email !== 'string' || typeof value.savedAt !== 'number') {
+    return null
+  }
+  const email = value.email.trim()
+  if (!email) return null
+  return { email, savedAt: value.savedAt }
+}
+
+export function loadWaitlistSignup(): WaitlistSignup | null {
+  if (typeof localStorage === 'undefined') return null
+  try {
+    const raw = localStorage.getItem(WAITLIST_STORAGE_KEY)
+    if (!raw) return null
+    return parseWaitlist(JSON.parse(raw))
+  } catch {
+    return null
+  }
+}
+
+export function saveWaitlistEmail(email: string): WaitlistSignup {
+  const signup: WaitlistSignup = {
+    email: email.trim(),
+    savedAt: Date.now(),
+  }
+  localStorage.setItem(WAITLIST_STORAGE_KEY, JSON.stringify(signup))
+  return signup
 }

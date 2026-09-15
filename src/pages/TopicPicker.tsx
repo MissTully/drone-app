@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Disclaimer } from '../components/Disclaimer'
+import { ExamReadyBanner } from '../components/ExamReadyBanner'
 import { useQuiz } from '../context/QuizContext'
 import { QUESTION_BANK } from '../data/bank'
 import { TOPICS } from '../data/topics'
@@ -18,8 +19,12 @@ export function TopicPicker() {
         Questions are shuffled. Each session uses all 25 items from the selected topic, with
         feedback after each answer.
       </p>
-      <div style={{ margin: '1rem 0' }}>
+      <div style={{ margin: '1rem 0', display: 'grid', gap: '0.75rem' }}>
         <Disclaimer compact />
+        <ExamReadyBanner>
+          Exam Ready unlocks the full 225-question bank, full rationales, and unlimited retry of
+          missed questions.
+        </ExamReadyBanner>
       </div>
       <div className={styles.grid}>
         {TOPICS.map((topic) => {
