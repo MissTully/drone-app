@@ -49,8 +49,26 @@ export function Layout({ children }: { children: ReactNode }) {
       </header>
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
-        Remote Possibilities is a study aid. Practice questions are not official FAA test items.
-        Embedded videos are third-party content and are not official FAA training.
+        <p className={styles.disclaimer}>
+          Remote Possibilities is a study aid. Practice questions are not official FAA test items.
+          Embedded videos are third-party content and are not official FAA training.
+        </p>
+        <a
+          className={styles.credit}
+          href="https://www.encountive.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Made by</span>
+          <span className={styles.creditMark}>
+            <img
+              className={styles.creditLogo}
+              src="/encountive-logo.png"
+              alt="Encountive"
+              height={32}
+            />
+          </span>
+        </a>
       </footer>
     </div>
   )
