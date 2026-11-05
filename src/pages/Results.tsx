@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import { Disclaimer } from '../components/Disclaimer'
 import { ExamReadyBanner } from '../components/ExamReadyBanner'
 import { useQuiz } from '../context/QuizContext'
-import { getQuestionsByIds } from '../data/bank'
+import { questionsForIds } from '../data/bank'
 import { PASS_THRESHOLD, TOPIC_LABELS } from '../data/topics'
-import { letterForIndex } from '../lib/quiz'
+import { formatAnswer } from '../lib/quiz'
 import btn from '../components/Buttons.module.css'
 import styles from './Results.module.css'
 
@@ -25,7 +25,7 @@ export function Results() {
     )
   }
 
-  const questions = getQuestionsByIds(result.questionIds)
+  const questions = questionsForIds(result.questionIds) ?? []
   const questionMap = new Map(questions.map((question) => [question.id, question]))
   const passLine = Math.round(PASS_THRESHOLD * 100)
   const modeLabel =
@@ -58,7 +58,8 @@ export function Results() {
       <section className={styles.section}>
         <h2>Breakdown by topic</h2>
         {result.breakdown.map((row) => {
-          const pct = row.asked === 0 ? 0 : Math.round((row.correct / row.asked) * 100)
+          const pct =
+            row.asked === 0 ? 0 : Math.min(100, Math.max(0, Math.round((row.correct / row.asked) * 100)))
           return (
             <div className={styles.row} key={row.topicId}>
               <span>{TOPIC_LABELS[row.topicId]}</span>
@@ -82,11 +83,14 @@ export function Results() {
             {result.missed.map((item) => {
               const question = questionMap.get(item.questionId)
               if (!question) return null
-              const selected =
-                item.selectedIndex === null
-                  ? 'No answer'
-                  : `${letterForIndex(item.selectedIndex)}. ${question.choices[item.selectedIndex]}`
-              const correct = `${letterForIndex(question.correctIndex)}. ${question.choices[question.correctIndex]}`
+              const selected = formatAnswer(
+                item.selectedIndex === null ? undefined : question.choices[item.selectedIndex],
+                item.selectedIndex,
+              )
+              const correct = formatAnswer(
+                question.choices[question.correctIndex],
+                question.correctIndex,
+              )
               return (
                 <article className={styles.missedCard} key={item.questionId}>
                   <p className={styles.missedStem}>{question.stem}</p>

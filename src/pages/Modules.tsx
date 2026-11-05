@@ -4,6 +4,7 @@ import { Disclaimer } from '../components/Disclaimer'
 import { ProgressBar } from '../components/ProgressBar'
 import { getModule } from '../data/modules'
 import { TOPIC_IDS, TOPICS } from '../data/topics'
+import { youtubeNocookieEmbedUrl } from '../lib/embed'
 import { letterForIndex } from '../lib/quiz'
 import type { TopicId } from '../types'
 import btn from '../components/Buttons.module.css'
@@ -23,8 +24,10 @@ export function Modules() {
   const selected = isTopicId(topicId) ? topicId : 'regulations'
   const invalid = Boolean(topicId) && !isTopicId(topicId)
   const mod = invalid ? null : getModule(selected)
+  const embedUrl = mod ? youtubeNocookieEmbedUrl(mod.youtubeVideoId) : null
 
   const onSelectTopic = (next: string) => {
+    if (!isTopicId(next)) return
     navigate(`/modules/${next}`)
   }
 
@@ -72,15 +75,20 @@ export function Modules() {
             {mod.youtubeTitle} · {mod.youtubeChannel}
           </p>
           <div className={styles.embedWrap}>
-            <iframe
-              key={mod.youtubeVideoId}
-              className={styles.embed}
-              title={mod.youtubeTitle}
-              src={`https://www.youtube-nocookie.com/embed/${mod.youtubeVideoId}`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              referrerPolicy="strict-origin-when-cross-origin"
-            />
+            {embedUrl ? (
+              <iframe
+                key={mod.youtubeVideoId}
+                className={styles.embed}
+                title={mod.youtubeTitle}
+                src={embedUrl}
+                sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            ) : (
+              <p>This module video cannot be embedded.</p>
+            )}
           </div>
 
           <section className={styles.section}>

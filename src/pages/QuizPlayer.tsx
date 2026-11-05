@@ -5,7 +5,7 @@ import { ExamReadyBanner } from '../components/ExamReadyBanner'
 import { ProgressBar } from '../components/ProgressBar'
 import { Timer } from '../components/Timer'
 import { useQuiz } from '../context/QuizContext'
-import { getQuestionsByIds } from '../data/bank'
+import { questionsForIds } from '../data/bank'
 import { TOPIC_IDS, TOPIC_LABELS } from '../data/topics'
 import { letterForIndex } from '../lib/quiz'
 import type { TopicId } from '../types'
@@ -50,11 +50,7 @@ export function QuizPlayer() {
 
   const questions = useMemo(() => {
     if (!session) return []
-    try {
-      return getQuestionsByIds(session.questionIds)
-    } catch {
-      return []
-    }
+    return questionsForIds(session.questionIds) ?? []
   }, [session])
 
   if (!isTest && !isRetry && topicId && !isTopicId(topicId)) {

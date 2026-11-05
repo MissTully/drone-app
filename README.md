@@ -14,11 +14,15 @@ npm run dev
 Production build:
 
 ```bash
+npm test
 npm run build
 npm run preview
+npm run test:platform-auth
 ```
 
-Client-only React + Vite + TypeScript. No backend or account is required. Progress is stored in the browser under the `drone-app-progress` localStorage key (version 1).
+Client-only React + Vite + TypeScript. Progress is stored in this browser under the `drone-app-progress` localStorage key (version 1). The app does not have accounts of its own, and it does not receive the visitor's identity.
+
+Partner preview access is enforced by Vercel Authentication in front of the deployment. See [Partner access](#partner-access).
 
 ## Modes
 
@@ -53,6 +57,22 @@ Study module content lives in `src/data/modules.ts` (one module per topic). Vide
 
 From results you can **Retry missed**, **Retake**, or go **Home**.
 
+## Partner access
+
+Sign-in is not implemented in this repository. Vercel Authentication sits in front of the static deployment and runs before HTML, JavaScript, images, and the bundled study data are sent. The app never sees the visitor's email and does not assign roles.
+
+`ssoProtection.deploymentType` is `all` for this project. That covers production aliases, including `https://drone-app-five.vercel.app`, plus deployment URLs and previews. Anonymous requests are redirected to Vercel login before the app is served. The team is Pro, so outside logged-in Vercel users can be granted deployment access without a paid seat.
+
+Access workflow:
+
+1. Keep Vercel Authentication on for all deployments. Do not create shareable bypass links, and do not use a Protection Bypass for Automation secret as partner access.
+2. Each partner uses a free Vercel account registered with the exact approved email and requests access on the deployment.
+3. Melissa approves only those two requests. Approval happens in Vercel, not in this app.
+
+`npm run test:platform-auth` checks the production alias without a session. It is separate from `npm test`. An unauthenticated request should be stopped by Vercel Authentication and must not contain question text.
+
+Direct routes such as `/modules` rewrite to `index.html` after Vercel has allowed the request, so a signed-in partner does not get a static 404.
+
 ## Out of scope (v1)
 
-Auth, cloud sync, payments, spaced repetition, official FAA licensing, and native wrappers.
+In-app auth, cloud sync, payments, spaced repetition, official FAA licensing, and native wrappers. Access control stays on Vercel Authentication.
