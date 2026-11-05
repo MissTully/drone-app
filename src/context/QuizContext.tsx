@@ -7,12 +7,9 @@ import {
   type ReactNode,
 } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { QUESTION_BANK, getQuestionsByIds } from '../data/bank'
-import {
-  RESULT_STORAGE_KEY,
-  SESSION_STORAGE_KEY,
-  TEST_DURATION_MS,
-} from '../data/topics'
+import { QUESTION_BANK, knownQuestionIds, questionsForIds } from '../data/bank'
+import { TEST_DURATION_MS } from '../data/topics'
+import { loadResult, loadSession, writeResult, writeSession } from '../lib/persistedQuiz'
 import { pickPracticeQuestions, pickTestQuestions, scoreSession } from '../lib/quiz'
 import { recordPracticeScore, recordTestScore } from '../lib/storage'
 import type { QuizMode, QuizResult, QuizSession, TopicId } from '../types'
@@ -31,55 +28,6 @@ type QuizContextValue = {
 
 const QuizContext = createContext<QuizContextValue | null>(null)
 
-function isSession(value: unknown): value is QuizSession {
-  if (typeof value !== 'object' || value === null) return false
-  const session = value as QuizSession
-  return (
-    Array.isArray(session.questionIds) &&
-    Array.isArray(session.answers) &&
-    typeof session.currentIndex === 'number' &&
-    typeof session.startedAt === 'number' &&
-    (session.mode === 'practice' || session.mode === 'test' || session.mode === 'retry')
-  )
-}
-
-function isResult(value: unknown): value is QuizResult {
-  if (typeof value !== 'object' || value === null) return false
-  const result = value as QuizResult
-  return Array.isArray(result.questionIds) && typeof result.scorePercent === 'number'
-}
-
-function readSession(): QuizSession | null {
-  try {
-    const raw = sessionStorage.getItem(SESSION_STORAGE_KEY)
-    if (!raw) return null
-    const parsed: unknown = JSON.parse(raw)
-    return isSession(parsed) ? parsed : null
-  } catch {
-    return null
-  }
-}
-
-function readResult(): QuizResult | null {
-  try {
-    const raw = sessionStorage.getItem(RESULT_STORAGE_KEY)
-    if (!raw) return null
-    const parsed: unknown = JSON.parse(raw)
-    return isResult(parsed) ? parsed : null
-  } catch {
-    return null
-  }
-}
-
-function persistSession(session: QuizSession | null) {
-  if (!session) sessionStorage.removeItem(SESSION_STORAGE_KEY)
-  else sessionStorage.setItem(SESSION_STORAGE_KEY, JSON.stringify(session))
-}
-
-function persistResult(result: QuizResult | null) {
-  if (!result) sessionStorage.removeItem(RESULT_STORAGE_KEY)
-  else sessionStorage.setItem(RESULT_STORAGE_KEY, JSON.stringify(result))
-}
 
 function makeSession(
   mode: QuizMode,
@@ -100,18 +48,18 @@ function makeSession(
 
 export function QuizProvider({ children }: { children: ReactNode }) {
   const navigate = useNavigate()
-  const [session, setSession] = useState<QuizSession | null>(() => readSession())
-  const [result, setResult] = useState<QuizResult | null>(() => readResult())
+  const [session, setSession] = useState<QuizSession | null>(() => loadSession())
+  const [result, setResult] = useState<QuizResult | null>(() => loadResult())
 
   const updateSession = useCallback((next: QuizSession | null) => {
     setSession(next)
-    persistSession(next)
+    writeSession(next)
   }, [])
 
   const startPractice = useCallback(
     (topicId: TopicId, options?: { resume?: boolean }) => {
       if (options?.resume) {
-        const existing = readSession()
+        const existing = loadSession()
         if (
           existing?.status === 'active' &&
           existing.mode === 'practice' &&
@@ -125,7 +73,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
       const questions = pickPracticeQuestions(QUESTION_BANK, topicId)
       const next = makeSession('practice', questions.map((q) => q.id), topicId)
       updateSession(next)
-      persistResult(null)
+      writeResult(null)
       setResult(null)
       void navigate(`/practice/${topicId}`)
     },
@@ -135,7 +83,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
   const startTest = useCallback(
     (options?: { resume?: boolean }) => {
       if (options?.resume) {
-        const existing = readSession()
+        const existing = loadSession()
         if (existing?.status === 'active' && existing.mode === 'test') {
           updateSession(existing)
           void navigate('/test')
@@ -148,7 +96,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
         questions.map((q) => q.id),
       )
       updateSession(next)
-      persistResult(null)
+      writeResult(null)
       setResult(null)
       void navigate('/test')
     },
@@ -157,9 +105,11 @@ export function QuizProvider({ children }: { children: ReactNode }) {
 
   const startRetry = useCallback(
     (questionIds: string[]) => {
-      const next = makeSession('retry', questionIds)
+      const ids = knownQuestionIds(questionIds)
+      if (ids.length === 0) return
+      const next = makeSession('retry', ids)
       updateSession(next)
-      persistResult(null)
+      writeResult(null)
       setResult(null)
       void navigate('/retry')
     },
@@ -188,6 +138,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
   const selectAnswer = useCallback(
     (choiceIndex: number) => {
       if (!session || session.status !== 'active') return
+      if (!Number.isInteger(choiceIndex) || choiceIndex < 0 || choiceIndex > 3) return
       const answers = [...session.answers]
       answers[session.currentIndex] = choiceIndex
       updateSession({ ...session, answers })
@@ -198,7 +149,13 @@ export function QuizProvider({ children }: { children: ReactNode }) {
   const submitQuiz = useCallback(() => {
     const active = session
     if (!active) return
-    const questions = getQuestionsByIds(active.questionIds)
+    const questions = questionsForIds(active.questionIds)
+    if (!questions) {
+      updateSession(null)
+      writeResult(null)
+      setResult(null)
+      return
+    }
     const scored = scoreSession(questions, active.answers)
     const nextResult: QuizResult = {
       ...scored,
@@ -217,7 +174,7 @@ export function QuizProvider({ children }: { children: ReactNode }) {
     const submitted: QuizSession = { ...active, status: 'submitted' }
     updateSession(submitted)
     setResult(nextResult)
-    persistResult(nextResult)
+    writeResult(nextResult)
     void navigate('/results')
   }, [navigate, session, updateSession])
 

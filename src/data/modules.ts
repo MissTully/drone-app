@@ -1,3 +1,4 @@
+import { youtubeNocookieEmbedUrl } from '../lib/embed'
 import type { StudyModule, TopicId } from '../types'
 import { TOPIC_IDS } from './topics'
 
@@ -815,7 +816,7 @@ function isStudyModule(value: unknown): value is StudyModule {
   return (
     TOPIC_IDS.includes(mod.topicId) &&
     typeof mod.youtubeVideoId === 'string' &&
-    mod.youtubeVideoId.length > 0 &&
+    youtubeNocookieEmbedUrl(mod.youtubeVideoId) !== null &&
     Array.isArray(mod.keyPoints) &&
     mod.keyPoints.length >= 5 &&
     mod.keyPoints.length <= 8 &&

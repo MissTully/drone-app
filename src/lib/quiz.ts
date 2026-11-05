@@ -127,5 +127,12 @@ export function formatClock(ms: number): string {
 }
 
 export function letterForIndex(index: number): string {
+  if (!Number.isInteger(index) || index < 0 || index > 25) return ''
   return String.fromCharCode(65 + index)
+}
+
+export function formatAnswer(choice: string | undefined, index: number | null): string {
+  if (index === null || choice === undefined) return 'No answer'
+  const letter = letterForIndex(index)
+  return letter ? `${letter}. ${choice}` : choice
 }

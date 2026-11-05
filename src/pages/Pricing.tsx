@@ -8,6 +8,7 @@ import {
   FREE_PRACTICE_QUESTIONS_PER_TOPIC,
   FREE_TIMED_TESTS,
 } from '../lib/entitlements'
+import { normalizeEmail } from '../lib/email'
 import { loadWaitlistSignup, saveWaitlistEmail } from '../lib/storage'
 import btn from '../components/Buttons.module.css'
 import styles from './Pricing.module.css'
@@ -53,8 +54,6 @@ const FAQS = [
   },
 ]
 
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
 function scrollToWaitlist(event: { preventDefault: () => void }) {
   event.preventDefault()
   document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -68,19 +67,19 @@ export function Pricing() {
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    const next = email.trim()
+    const next = normalizeEmail(email)
     if (!next) {
-      setStatus('error')
-      setError('Enter an email to get notified.')
-      return
-    }
-    if (!EMAIL_PATTERN.test(next)) {
       setStatus('error')
       setError('Enter a valid email address.')
       return
     }
-    saveWaitlistEmail(next)
-    setEmail(next)
+    const saved = saveWaitlistEmail(next)
+    if (!saved) {
+      setStatus('error')
+      setError('Enter a valid email address.')
+      return
+    }
+    setEmail(saved.email)
     setStatus('saved')
     setError('')
   }
@@ -156,7 +155,7 @@ export function Pricing() {
       <section className={styles.waitlist} id="waitlist" aria-labelledby="waitlist-heading">
         <h2 id="waitlist-heading">Get Exam Ready</h2>
         <p className={styles.waitlistNote}>
-          Checkout coming soon. Leave your email to get notified.
+          Checkout is not open yet. An email saved here stays in this browser and is not sent to a server.
         </p>
         <form className={styles.form} onSubmit={onSubmit} noValidate>
           <label className={styles.field}>
@@ -171,6 +170,8 @@ export function Pricing() {
                 setEmail(event.target.value)
                 if (status !== 'idle') setStatus('idle')
               }}
+              maxLength={254}
+              spellCheck={false}
               placeholder="you@email.com"
               aria-invalid={status === 'error'}
               aria-describedby={status === 'error' ? 'waitlist-error' : status === 'saved' ? 'waitlist-success' : undefined}
@@ -187,7 +188,7 @@ export function Pricing() {
         ) : null}
         {status === 'saved' ? (
           <p className={styles.formSuccess} id="waitlist-success" role="status">
-            You’re on the list. We’ll email you when checkout is ready.
+            Saved on this device only. Nothing was sent to a server.
           </p>
         ) : null}
       </section>

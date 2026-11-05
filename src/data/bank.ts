@@ -61,11 +61,37 @@ export function getQuestionMap(): Map<string, Question> {
   return new Map(QUESTION_BANK.map((question) => [question.id, question]))
 }
 
-export function getQuestionsByIds(ids: string[]): Question[] {
+const QUESTION_ID_PATTERN = /^[a-z0-9-]{1,40}$/
+
+export function knownQuestionIds(ids: readonly string[]): string[] {
   const map = getQuestionMap()
-  return ids.map((id) => {
+  const unique: string[] = []
+  const seen = new Set<string>()
+  for (const id of ids) {
+    if (typeof id !== 'string' || !QUESTION_ID_PATTERN.test(id) || seen.has(id) || !map.has(id)) {
+      continue
+    }
+    seen.add(id)
+    unique.push(id)
+    if (unique.length >= 60) break
+  }
+  return unique
+}
+
+export function questionsForIds(ids: readonly string[]): Question[] | null {
+  const map = getQuestionMap()
+  const questions: Question[] = []
+  for (const id of ids) {
+    if (typeof id !== 'string') return null
     const question = map.get(id)
-    if (!question) throw new Error(`Unknown question id: ${id}`)
-    return question
-  })
+    if (!question) return null
+    questions.push(question)
+  }
+  return questions
+}
+
+export function getQuestionsByIds(ids: string[]): Question[] {
+  const questions = questionsForIds(ids)
+  if (!questions) throw new Error('Unknown question id')
+  return questions
 }
